@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masala Magic</title>
+    <link href="./css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
@@ -13,44 +14,34 @@
     <link rel="icon" type="image/-icon" href="imgs/Masala Magic.png">
     <meta name="description" content="Welcome to Indian Restaurant">
     <meta name="keywords" content="Enjoy Vegetarian Indian Cuisine">
-    <meta name="author" content="Chandhan Juluru">
 </head>
 <body>
     <!-- Start header -->
-    <header id="header">
-        <div class="container">
-            <a href="index.html" class="mainlogo"><img src="imgs/Masala Magic.png" alt="Logo"> Masala Magic</a>
-            <nav>
-                <ul>
-                    <li><a href="#our-mission" class="nav-a nav-otherL">Our Mission</a></li>
-                    <li><a href="#our_process" class="nav-a">Our Process</a></li>
-                    <li><a href="#Menu" class="nav-a">Our Menu</a></li>
-                    <li><a href="reservation.html" class="nav-a">Reservation</a></li>
-                    <li><a href="checkout.html" class="nav-a"><img src="imgs/ShoppingCart.png" alt=""></a></li>
-                    <li><a href="References.html" class="nav-a">References</a></li>
-                </ul>
-            </nav>
+
+    <header class="flex flex-row justify-between overflow-clip w-[100vw]">
+        <div class="flex flex-col justify-start gap-10 h-screen">
+            <img src="https://plus.unsplash.com/premium_photo-1669742928112-19364a33b530?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Delicious Food" class="w-96 h-auto rounded-2xl -translate-x-[20%]">
+            <img src="https://plus.unsplash.com/premium_photo-1669742928112-19364a33b530?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Delicious Food" class="w-96 h-auto rounded-2xl -translate-x-[20%]">
+            </div>
+
+            <div class="flex flex-col justify-start items-center">
+
+                <img src="imgs/Masala Magic.png" alt="Masala Magic" class="w-[40rem] h-auto rounded-2xl mx-auto">
+
+                <h2 class="text-4xl pt-10">Step Right in Through the Door Step of Authentic Indian Cuisine</h2>
+
+                <div>
+                    <a class="text-2xl px-2 py-6 bg-lime-300">Menu</a>
+                    <a class="text-2xl px-2 py-6 ">Learn More</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-start gap-10 h-screen">
+                <img src="imgs/GulabJamun.png" alt="Delicious Food" class="w-96 h-auto rounded-2xl translate-x-[20%]">
+                <img src="https://plus.unsplash.com/premium_photo-1669742928112-19364a33b530?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Delicious Food" class="w-96 h-auto rounded-2xl translate-x-[20%]">
         </div>
     </header>
-    <!-- End header -->
-    <!-- Start Landing -->
-   
-    <div class="landing">
-        <div class="video-container">
-            <video autoplay muted loop id="landing-video">
-                <source src="imgs/rotating_food.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <div class="container">
-            <div class="text-content">
-                <h1>Welcome, To Masala Magic</h1>
-                <p>Enjoy Vegetarian Indian Cuisine</p>
-                <p>Team Id: 2043-905</p>
-                <p>Individual Id's: 2043-040, 2043-038, 2043-049, 2043-128, 2043-032</p>
-            </div>
-        </div>
-        <a href="#Menu" class="go-down"><i class="fa-solid fa-angles-down fa-xl"></i></a>
-    </div>
+
     
     <!-- End Landing -->
       <!-- Start Our Mission -->

@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Start Global Variables */
 :root {
     --main-color: #e66611;
@@ -13,17 +16,11 @@
     --features-box-color-1: #f44036;
     --features-box-color-2: #009688 ;
     --features-box-color-3: #03a9f4;
+
+    font-family: 'Inika', serif !important;
     
 }
 /* Add this to your CSS file */
-
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10; /* Ensures the header is on top */
-}
 
 .content {
     padding-top: 75px; /* Adjust the padding based on your header's height */
@@ -66,39 +63,7 @@ header {
     padding: 20px;
 }
 
-/* Improved Header Styling */
-header {
-    background: rgba(0, 0, 0, 0.85); /* Darker semi-transparent background */
-    backdrop-filter: blur(10px); /* Smooth glass effect */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 80px; /* Slightly shorter for a modern look */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-}
 
-/* Logo */
-header .mainlogo {
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-}
-
-header .mainlogo img {
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
-    margin-right: 10px;
-}
 
 /* Navigation Menu */
 nav ul {
@@ -146,10 +111,6 @@ nav ul li a:hover {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-    header {
-        height: 70px;
-        padding: 0 20px;
-    }
     
     nav ul {
         display: none; /* Hide menu on small screens */
@@ -600,8 +561,6 @@ footer a:hover {
     margin: 0;
 }
 body {
-    font-family: 'Cairo Play', sans-serif;
-    font-family: 'Open Sans', sans-serif;
     padding-top: 100px;
     background: linear-gradient(to bottom, #ffeb99 10%, #e66611 90%);
     background-attachment: fixed; /* Keeps gradient fixed while scrolling */
@@ -632,18 +591,9 @@ ul {
     margin: 0;
     padding: 0;
 }
-a {
-    text-decoration: none;
-}
 /* End Global Rules */
 /* Start Shared Components */
-header{
-    .main-title{
-    color: var(--main-color);    
-    font-size: 30px;
-    }
-    
-}
+
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -809,73 +759,14 @@ header{
 .dots-down {
     bottom: 20px;
 }
-/* End Shared Components */
-/* Start header with transparency*/
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(100px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 110px; /* Reduce header height */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center; /* Vertically align content */
-}
-
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-@media (max-width: 992px) {
-    header .container {
-        padding-left: 25px;
-        padding-right: 25px;
-        flex-wrap: wrap;
-    }
-    header {
-        height: 100%;  
-        width: 100%;
-    }
-}
-header .container a.logo {
-    color: var(--main-color);
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: bold;
-    height: 72px;
-    display: flex;   
-    justify-content: center;
-    align-items: center;
-}
-@media (min-width: 993px) {
-    header.container a.logo {
-        font-size: 35px;
-    }
-}
-header .container .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header .container .logo img {
-    width: 40px; /* Make the logo smaller */
-    margin-right: 8px;
-}
 
 @media (max-width: 768px) {
-    header .container .logo {
-        width: 100%;            
-    }
-}
-header nav ul {
+ 
+nav ul {
     display: flex;
     justify-content: space-between;
 }
-header nav ul > li > a {
+nav ul > li > a {
     color: black;
     display: flex;
     align-items: center;
@@ -886,7 +777,7 @@ header nav ul > li > a {
     white-space: nowrap;
 }
 
-header nav ul > li > a::before {
+nav ul > li > a::before {
     content: "";
     z-index: -1;
     height: 93%;
@@ -899,44 +790,31 @@ header nav ul > li > a::before {
     transition: var(--main-transition);
 }
 @media (max-width: 768px) {
-    header .container {
-        padding-left: 25px;
-        padding-right: 25px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    header nav ul > li > a {
+     nav ul > li > a {
         padding: 0px 12px;
         font-size: 20px;
         height: 40px;
     }
-    header .container .logo {
-        height: 45px;
-    }
-    header nav ul > li > a::before {
+     nav ul > li > a::before {
         content: "";
         z-index: -1;
         height: 87%;
     }
 }
 /* Initial state: normal font weight and smaller font size */
-header nav ul > li > a.nav-a {
+ nav ul > li > a.nav-a {
     font-weight: normal; /* Set initial font weight to normal */
     font-size: 16px; /* Set a standard initial font size */
     transition: font-size 0.3s ease, font-weight 0.3s ease; /* Smooth transition for size and weight */
 }
 
 /* Hover state: bold text and larger font size */
-header nav ul > li > a.nav-a:hover {
+nav ul > li > a.nav-a:hover {
     font-weight: bold; /* Make text bold */
     font-size: 18px; /* Increase font size on hover */
     color: inherit; /* Keep the original color */
 }
 
-img {
-    width: 40px;
-    height: auto; /* Maintains aspect ratio */
-}
 /* End header*/
 /* Start Landing*/
 .landing {
@@ -2814,4 +2692,5 @@ body {
     color: white;
     font-size: 0.9rem;
     margin-top: 20px;
+}
 }
