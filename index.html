@@ -1,17 +1,17 @@
-<!D<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masala Magic</title>
-    <link href="./css/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link href="src/css/output.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;400;600;700;800;900;1000&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/-icon" href="imgs/Masala Magic.png">
+    <link rel="icon" type="image/-icon" href="src/imgs/Masala Magic.png">
     <meta name="description" content="Welcome to Indian Restaurant">
     <meta name="keywords" content="Enjoy Vegetarian Indian Cuisine">
 </head>
@@ -26,18 +26,19 @@
 
             <div class="flex flex-col justify-start items-center">
 
-                <img src="imgs/Masala Magic.png" alt="Masala Magic" class="w-[40rem] h-auto rounded-2xl mx-auto">
+                <img src="src/imgs/Masala Magic.png" alt="Masala Magic" class="w-[30rem] h-auto rounded-2xl mx-auto">
 
-                <h2 class="text-4xl pt-10">Step Right in Through the Door Step of Authentic Indian Cuisine</h2>
+                <h2 class="text-4xl pt-10 text-center">Step Right in Through the Door Step of Authentic Indian Cuisine</h2>
 
-                <div>
-                    <a class="text-2xl px-2 py-6 bg-lime-300">Menu</a>
-                    <a class="text-2xl px-2 py-6 ">Learn More</a>
+
+                <div class="flex flex-row justify-center gap-10 pt-10">
+                    <button class="text-xl bg-lime-300 px-3 py-3 rounded-xl">Menu</button>
+                    <button class="text-xl bg-lime-300 px-3 py-3 rounded-xl">Learn More</button>
                 </div>
             </div>
 
             <div class="flex flex-col justify-start gap-10 h-screen">
-                <img src="imgs/GulabJamun.png" alt="Delicious Food" class="w-96 h-auto rounded-2xl translate-x-[20%]">
+                <img src="src/imgs/GulabJamun.png" alt="Delicious Food" class="w-96 h-auto rounded-2xl translate-x-[20%]">
                 <img src="https://plus.unsplash.com/premium_photo-1669742928112-19364a33b530?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Delicious Food" class="w-96 h-auto rounded-2xl translate-x-[20%]">
         </div>
     </header>
@@ -50,13 +51,13 @@
     <h2 class="main-title">Our Mission</h2>
 
     <!-- First Mission Box -->
-    <div class="mission-box slide-in left">
+    <div class="flex flex-row justify-center items-center gap-12 px-10 slide-in left">
         <div class="mission-image">
-            <img src="imgs/mission-image.png" alt="Mission Image">
+            <img src="src/imgs/mission-image.png" alt="Mission Image">
         </div>
-        <div class="mission-text">
-            <h2>Fresh Ingredients from Sustainable Farms</h2>
-            <p>We are committed to using ingredients hand-picked directly from our partner farms, ensuring the highest quality and flavor.</p>
+        <div class="flex flex-col gap-2">
+            <h2 class="text-6xl font-semibold">Fresh Ingredients from Sustainable Farms</h2>
+            <p class="text-2xl">We are committed to using ingredients hand-picked directly from our partner farms, ensuring the highest quality and flavor.</p>
         </div>
     </div>
     
@@ -67,14 +68,14 @@
             <p>Our farmers grow products without harmful chemicals, ensuring a healthy and nutritious dining experience.</p>
         </div>
         <div class="mission-image">
-            <img src="imgs/sustainability.png" alt="Sustainability Image">
+            <img src="src/imgs/sustainability.png" alt="Sustainability Image">
         </div>
     </div>
 
     <!-- Third Mission Box -->
     <div class="mission-box slide-in left">
         <div class="mission-image">
-            <img src="imgs/green-future.png" alt="Green Future Image">
+            <img src="src/imgs/green-future.png" alt="Green Future Image">
         </div>
         <div class="mission-text">
             <h2>Building a Greener Future</h2>
@@ -84,65 +85,36 @@
 </section>
         
     </div>
-    <!-- End Our Code -->
-    <!-- Start Articles -->
-    <div class="spikes"></div>
-    <div class="our-process" id="our_process">
-        <div class="angled-background"></div>
-        <h2 class="main-title">Our Process</h2>
-        
-        <div class="process-container">
-            <div class="process-tabs">
-                <div class="process-tab active" data-tab="farm">Farm-to-Table</div>
-                <div class="process-tab" data-tab="waste">Zero Waste</div>
-                <div class="process-tab" data-tab="inventory">Just-In-Time</div>
-                <div class="process-tab" data-tab="energy">Energy Efficiency</div>
-            </div>
-            
-            <div class="process-content">
-                <div class="process-item show" id="farm">
-                    <img src="imgs/FarmToTable.png" alt="Farm-to-Table">
-                    <div class="process-text">
-                        <h3>Farm-to-Table</h3>
-                        <p>We source the freshest ingredients directly from organic farms, ensuring every dish is full of rich, natural flavors.</p>
-                        <a href="article1.html" class="read-more-button">
-                            <span>Read More</span> <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="process-item" id="waste">
-                    <img src="imgs/ZeroWaste1.png" alt="Zero Waste">
-                    <div class="process-text">
-                        <h3>Zero Waste Cooking</h3>
-                        <p>Every ingredient is used efficiently. Leftovers are composted or repurposed into new, creative dishes.</p>
-                        <a href="article2.html" class="read-more-button">
-                            <span>Read More</span> <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="process-item" id="inventory">
-                    <img src="imgs/JustInTime.png" alt="Just-In-Time">
-                    <div class="process-text">
-                        <h3>Just-In-Time Inventory</h3>
-                        <p>We stock ingredients only when needed, ensuring minimal food waste and peak freshness for all our meals.</p>
-                        <a href="article3.html" class="read-more-button">
-                            <span>Read More</span> <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="process-item" id="energy">
-                    <img src="imgs/EnergyEfficiency.png" alt="Energy Efficiency">
-                    <div class="process-text">
-                        <h3>Energy Efficiency</h3>
-                        <p>Our kitchen runs on state-of-the-art energy-efficient equipment, reducing our carbon footprint while enhancing performance.</p>
-                        <a href="article4.html" class="read-more-button">
-                            <span>Read More</span> <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
+    <section class="flex flex-col sm:flex-row items-center justify-center sm:w-[100%] sm:h-screen bg-black p-12 gap-8">
+        <div id="section1Main" class="sm:w-1/2 h-full bg-gray-500 rounded-2xl flex flex-col justify-center items-center gap-12">
+            <div class="flex flex-col gap-12 w-full h-full justify-center items-center">
+                <div id="section1" class="h-full w-full gap-10 flex flex-col justify-center items-center p-10">
+                    <h2 class="text-2xl sm:text-5xl font-bold text-white">Our Commitment to Sustainability</h2>
+                    <p class="text-lg sm:text-3xl text-white">At Seimei Greens we are dedicated to conserving the environment by sourcing our vegetables from farms that value the environment just as much as their product quality</p>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="flex flex-col gap-8 sm:w-1/2 h-full">
+            <div id="section2Main" class="h-1/2 bg-gray-500 rounded-2xl flex flex-col justify-center items-center">
+                <div class="flex flex-col gap-8 w-full h-full justify-center items-start py-16 p-10" id="section1">
+                    <h2 class="text-2xl sm:text-5xl font-bold text-white">Healthy Food From The Get-Go</h2>
+                    <p class="text-lg sm:text-3xl text-white">We ensure all the ingredients in our food are non-GMO so that you can enjoy the true authenticity of food </p>
+                </div>
+            </div>
+            <div id="section3Main" class="h-1/2 bg-green-700 rounded-2xl flex flex-col justify-center items-center">
+                <div class="flex flex-col gap-12 w-full h-full justify-center items-center py-24 p-10" id="section1">
+                    <h2 class="text-2xl sm:text-5xl font-bold text-white ">We Lead Innovation: Learn More About Our Commitments
+                        <a href="/approach">
+                            <span class=" pb-3 mb-3 px-3 text-3xl font-extrabold text-black rounded-full bg-[#D6FA32]">
+                                <strong>→</strong>
+                            </span>
+                        </a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     
     <script>
@@ -182,7 +154,7 @@
             <!-- Menu Item 1 -->
             <div class="box">
                 <button onclick="window.location.href='GobiManchuria.html'">
-                    <img src="imgs/GobiManchuria.png" alt="Gobi Manchuria">
+                    <img src="src/imgs/GobiManchuria.png" alt="Gobi Manchuria">
                 </button>
                 <p class="food-name">Gobi Manchuria</p>
             </div>
@@ -190,7 +162,7 @@
             <!-- Menu Item 2 -->
             <div class="box">
                 <button onclick="window.location.href='PaneerButterMasala.html'">
-                    <img src="imgs/PaneerButterMasala3.png" alt="Paneer Butter Masala">
+                    <img src="src/imgs/PaneerButterMasala3.png" alt="Paneer Butter Masala">
                 </button>
                 <p class="food-name">Paneer Butter Masala</p>
             </div>
@@ -198,7 +170,7 @@
             <!-- Menu Item 3 -->
             <div class="box">
                 <button onclick="window.location.href='GulabJamun.html'">
-                    <img src="imgs/GulabJamun1.jpg" alt="Gulab Jamun">
+                    <img src="src/imgs/GulabJamun1.jpg" alt="Gulab Jamun">
                 </button>
                 <p class="food-name">Gulab Jamun</p>
             </div>
@@ -206,7 +178,7 @@
             <!-- Menu Item 4 -->
             <div class="box">
                 <button onclick="window.location.href='PaneerBiryani.html'">
-                    <img src="imgs/PaneerBiryani3.jpg" alt="Biryani">
+                    <img src="src/imgs/PaneerBiryani3.jpg" alt="Biryani">
                 </button>
                 <p class="food-name">Biryani</p>
             </div>
@@ -214,7 +186,7 @@
             <!-- Menu Item 5 -->
             <div class="box">
                 <button onclick="window.location.href='Jalebi.html'">
-                    <img src="imgs/Jalebi1.webp" alt="Jalebi">
+                    <img src="src/imgs/Jalebi1.webp" alt="Jalebi">
                 </button>
                 <p class="food-name">Jalebi</p>
             </div>
@@ -228,7 +200,7 @@
     <footer>
         <div class="container">
             <div class="box">
-                <a href="#" class="AK-logo"><img src="imgs/Masala Magic.png" alt="">Masala Magic</a>
+                <a href="#" class="AK-logo"><img src="src/imgs/Masala Magic.png" alt="">Masala Magic</a>
                 <ul class="icons">
                     <li class="facebook"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li class="twitter"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></i></a></li>
