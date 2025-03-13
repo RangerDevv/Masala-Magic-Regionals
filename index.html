@@ -26,7 +26,7 @@
 
             <div class="flex flex-col justify-start items-center">
 
-                <img src="src/imgs/Masala Magic.png" alt="Masala Magic" class="w-[30rem] h-auto rounded-2xl mx-auto">
+                <img src="src/imgs/Masala Magic.png" alt="Masala Magic" class="w-[25rem] h-auto rounded-2xl mx-auto">
 
                 <h2 class="text-4xl pt-10 text-center">Step Right in Through the Door Step of Authentic Indian Cuisine</h2>
 
@@ -115,84 +115,8 @@
         </div>
     </section>
 
-    
-    
-    <script>
-        document.querySelectorAll(".process-tab").forEach(tab => {
-            tab.addEventListener("click", function() {
-                // Remove active class from all tabs and hide all items
-                document.querySelectorAll(".process-tab").forEach(t => t.classList.remove("active"));
-                document.querySelectorAll(".process-item").forEach(item => {
-                    item.classList.remove("show");
-                    item.style.animation = ""; // Reset animation
-                });
-        
-                // Add active class to the clicked tab
-                this.classList.add("active");
-        
-                // Show the correct content with animation
-                const newItem = document.getElementById(this.dataset.tab);
-                newItem.classList.add("show");
-                newItem.style.animation = "popOut 0.5s ease-out";
-            });
-        });
-        </script>
-        
-        
-        
-        
-           
-    
-<div class="spikes2"></div>
-
     <!-- End Articles -->
     <!-- Start Gallery -->
-    <div class="gallery" id="Menu">
-        <h2 class="main-title">Our Menu</h2>
-        <h2 class="h2">Press on the food to see more information</h2>
-        <div class="container">
-            <!-- Menu Item 1 -->
-            <div class="box">
-                <button onclick="window.location.href='GobiManchuria.html'">
-                    <img src="src/imgs/GobiManchuria.png" alt="Gobi Manchuria">
-                </button>
-                <p class="food-name">Gobi Manchuria</p>
-            </div>
-    
-            <!-- Menu Item 2 -->
-            <div class="box">
-                <button onclick="window.location.href='PaneerButterMasala.html'">
-                    <img src="src/imgs/PaneerButterMasala3.png" alt="Paneer Butter Masala">
-                </button>
-                <p class="food-name">Paneer Butter Masala</p>
-            </div>
-    
-            <!-- Menu Item 3 -->
-            <div class="box">
-                <button onclick="window.location.href='GulabJamun.html'">
-                    <img src="src/imgs/GulabJamun1.jpg" alt="Gulab Jamun">
-                </button>
-                <p class="food-name">Gulab Jamun</p>
-            </div>
-    
-            <!-- Menu Item 4 -->
-            <div class="box">
-                <button onclick="window.location.href='PaneerBiryani.html'">
-                    <img src="src/imgs/PaneerBiryani3.jpg" alt="Biryani">
-                </button>
-                <p class="food-name">Biryani</p>
-            </div>
-    
-            <!-- Menu Item 5 -->
-            <div class="box">
-                <button onclick="window.location.href='Jalebi.html'">
-                    <img src="src/imgs/Jalebi1.webp" alt="Jalebi">
-                </button>
-                <p class="food-name">Jalebi</p>
-            </div>
-        </div>
-    </div>
-        
     
     <!-- End Gallery -->
 
