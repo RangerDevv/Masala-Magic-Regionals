@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+.img-outline-left {
+    box-shadow: 15px 15px 0px rgb(0, 0, 0); /* Strong dark shadow */
+    border-radius: 10px; /* Optional: smooth edges */
+}
+
+.img-outline-right {
+    box-shadow: -15px 15px 0px rgb(0, 0, 0); /* Strong dark shadow */
+    border-radius: 10px; /* Optional: smooth edges */
+}
+
 /* Start Global Variables */
 :root {
     --main-color: #e66611;
@@ -554,10 +566,8 @@ footer a:hover {
 /* End Global Variables */
 /* Start Global Rules */
 body {
-    padding-top: 100px;
-    background: linear-gradient(to bottom, #ffeb99 10%, #e66611 90%);
-    background-attachment: fixed; /* Keeps gradient fixed while scrolling */
-}
+    background: linear-gradient(to bottom, #FFE0A7 0%, #FF8049 100%) !important;
+    background-attachment: fixed; /* Keeps gradient fixed while scrolling */}
 
 
 
@@ -882,11 +892,6 @@ nav ul > li > a.nav-a:hover {
     flex: 1;
 }
 
-/* General Styling */
-body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #f8f9fa;
-}
 
 /* Ensure Header and Form Separation */
 main {
