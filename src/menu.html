@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Magic Masala Menu</title>
+        <link rel="stylesheet" href="./css/output.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/all.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            .menu-header {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+                background-size: cover;
+                background-position: center;
+            }
+            .spice-level {
+                display: inline-block;
+                width: 60px;
+                height: 8px;
+                background: #e2e8f0;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+            .spice-level-fill {
+                height: 100%;
+                background: #e11d48;
+            }
+            .veg-icon {
+                color: #22c55e;
+            }
+            .non-veg-icon {
+                color: #ef4444;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Cart Indicator -->
+        <div class="fixed top-4 right-4 bg-white p-3 rounded-lg shadow-lg z-50">
+            <a
+                href="checkout.html"
+                class="flex items-center text-rose-600 hover:text-rose-700"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                </svg>
+                <span id="cart-count" class="font-semibold">0</span>
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="menu-header text-white py-16 px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Masala Magic Menu
+            </h1>
+            <p class="text-xl max-w-2xl mx-auto">
+                Authentic flavors from across India
+            </p>
+        </header>
+
+        <div class="container mx-auto px-4 py-12">
+            <!-- Appetizers Section -->
+            <section class="mb-16">
+                <h2
+                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
+                >
+                    Starters & Appetizers
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- Samosa -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('samosa')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Samosa"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Samosa
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Crispy pastry with spiced potato filling
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 60%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹80</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chicken Tikka -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('chicken_tikka')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Chicken Tikka"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Chicken Tikka
+                                </h3>
+                                <span class="non-veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Marinated chicken grilled to perfection
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹220</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paneer Pakora -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('paneer_pakora')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1630911422741-92906a8d7a8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Paneer Pakora"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Paneer Pakora
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Cottage cheese fritters with spices
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹150</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Courses Section -->
+            <section class="mb-16">
+                <h2
+                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
+                >
+                    Main Courses
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- Butter Chicken -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('butter_chicken')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Butter Chicken"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Butter Chicken
+                                </h3>
+                                <span class="non-veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Tandoori chicken in creamy tomato gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹280</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Palak Paneer -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('palak_paneer')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Palak Paneer"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Palak Paneer
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Cottage cheese in spinach gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 40%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹240</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lamb Rogan Josh -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('lamb_rogan_josh')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Lamb Rogan Josh"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Lamb Rogan Josh
+                                </h3>
+                                <span class="non-veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Aromatic lamb curry from Kashmir
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 80%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹320</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Breads Section -->
+            <section class="mb-16">
+                <h2
+                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
+                >
+                    Indian Breads
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- Garlic Naan -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('garlic_naan')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Garlic Naan"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Garlic Naan
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Leavened bread with garlic butter
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 20%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹60</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Butter Roti -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('butter_roti')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Butter Roti"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Butter Roti
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Whole wheat bread with butter
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹40</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Laccha Paratha -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('laccha_paratha')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Laccha Paratha"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Laccha Paratha
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Flaky layered bread with ghee
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 10%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹70</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Desserts Section -->
+            <section>
+                <h2
+                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
+                >
+                    Desserts
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- Gulab Jamun -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('gulab_jamun')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Gulab Jamun"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Gulab Jamun
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Milk dumplings in sugar syrup
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹90</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kheer -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('kheer')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Kheer"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Kheer
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Rice pudding with nuts and cardamom
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹110</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rasmalai -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('rasmalai')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Rasmalai"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Rasmalai
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Cottage cheese patties in sweetened milk
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">₹120</span>
+                                <button
+                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Popup Dialog -->
+        <div
+            id="popup"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+        >
+            <div
+                class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto"
+            >
+                <div class="relative">
+                    <img
+                        id="popup-image"
+                        src=""
+                        alt=""
+                        class="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <button
+                        onclick="closePopup()"
+                        class="absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h2 id="popup-title" class="text-2xl font-bold"></h2>
+                        <span id="popup-veg-nonveg"></span>
+                    </div>
+                    <p
+                        id="popup-price"
+                        class="text-xl text-rose-600 font-semibold mb-4"
+                    ></p>
+                    <p id="popup-description" class="text-gray-700 mb-4"></p>
+
+                    <div class="flex items-center mb-4">
+                        <span class="text-sm font-medium mr-2"
+                            >Spice Level:</span
+                        >
+                        <div class="spice-level">
+                            <div
+                                id="popup-spice-level"
+                                class="spice-level-fill"
+                            ></div>
+                        </div>
+                    </div>
+
+                    <div id="popup-details" class="mb-6"></div>
+
+                    <!-- Quantity Controls -->
+                    <div class="flex items-center mb-6">
+                        <span class="text-sm font-medium mr-4">Quantity:</span>
+                        <button
+                            onclick="changeQuantity(-1)"
+                            class="bg-gray-200 px-3 py-1 rounded-l hover:bg-gray-300"
+                        >
+                            -
+                        </button>
+                        <input
+                            type="number"
+                            id="quantity"
+                            value="1"
+                            min="1"
+                            class="w-16 text-center border-y border-gray-200"
+                            onchange="updateQuantity()"
+                        />
+                        <button
+                            onclick="changeQuantity(1)"
+                            class="bg-gray-200 px-3 py-1 rounded-r hover:bg-gray-300"
+                        >
+                            +
+                        </button>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <button
+                            onclick="closePopup()"
+                            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                        >
+                            Close
+                        </button>
+                        <button
+                            onclick="addToCart()"
+                            class="bg-rose-500 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded"
+                        >
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let currentItemId = null;
+
+            // Indian menu items data with numeric prices
+            const menuItems = {
+                // Starters
+                samosa: {
+                    title: "Samosa",
+                    displayPrice: "₹80 (2 pieces)",
+                    price: 80,
+                    description:
+                        "Crispy, golden-brown pastry filled with a savory mixture of spiced potatoes, peas, and aromatic herbs.",
+                    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 60,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Refined flour</li>
+                            <li>Potatoes</li>
+                            <li>Green peas</li>
+                            <li>Cumin seeds</li>
+                            <li>Coriander powder</li>
+                            <li>Garam masala</li>
+                            <li>Green chilies</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Allergens:</p>
+                            <p>Contains gluten</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Best served hot with mint chutney or tamarind sauce</p>
+                    `,
+                },
+                chicken_tikka: {
+                    title: "Chicken Tikka",
+                    displayPrice: "₹220 (6 pieces)",
+                    price: 220,
+                    description:
+                        "Succulent pieces of chicken marinated in yogurt and spices, cooked in a tandoor for that authentic smoky flavor.",
+                    image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 70,
+                    isVeg: false,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Chicken breast</li>
+                            <li>Yogurt</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Lemon juice</li>
+                            <li>Kashmiri red chili powder</li>
+                            <li>Garam masala</li>
+                            <li>Mustard oil</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Marination Time:</p>
+                            <p>Minimum 4 hours recommended</p>
+                        <p class='mt-4 font-semibold'>Cooking Method:</p>
+                            <p>Traditionally cooked in clay tandoor</p>
+                    `,
+                },
+                paneer_pakora: {
+                    title: "Paneer Pakora",
+                    displayPrice: "₹150 (8 pieces)",
+                    price: 150,
+                    description:
+                        "Soft paneer cubes coated in a spiced gram flour batter and deep-fried to crispy perfection.",
+                    image: "https://images.unsplash.com/photo-1630911422741-92906a8d7a8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 50,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Paneer (cottage cheese)</li>
+                            <li>Gram flour (besan)</li>
+                            <li>Rice flour</li>
+                            <li>Carom seeds (ajwain)</li>
+                            <li>Turmeric powder</li>
+                            <li>Red chili powder</li>
+                            <li>Coriander leaves</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Serving Temperature:</p>
+                            <p>Best served hot</p>
+                        <p class='mt-4 font-semibold'>Accompaniment:</p>
+                            <p>Comes with mint-coriander chutney</p>
+                    `,
+                },
+
+                // Main Courses
+                butter_chicken: {
+                    title: "Butter Chicken",
+                    displayPrice: "₹280",
+                    price: 280,
+                    description:
+                        "A rich and creamy tomato-based curry with tender pieces of tandoori chicken, butter, and cream.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 50,
+                    isVeg: false,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Chicken thigh pieces</li>
+                            <li>Tomato puree</li>
+                            <li>Fresh cream</li>
+                            <li>Butter</li>
+                            <li>Cashew paste</li>
+                            <li>Honey</li>
+                            <li>Kasuri methi (dried fenugreek leaves)</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Origin:</p>
+                            <p>Created in Delhi in the 1950s</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Best enjoyed with naan or jeera rice</p>
+                    `,
+                },
+                palak_paneer: {
+                    title: "Palak Paneer",
+                    displayPrice: "₹240",
+                    price: 240,
+                    description:
+                        "Fresh spinach cooked with spices and blended into a smooth gravy with soft cubes of paneer.",
+                    image: "https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 40,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Fresh spinach</li>
+                            <li>Paneer cubes</li>
+                            <li>Onion-tomato gravy</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Green chilies</li>
+                            <li>Cumin seeds</li>
+                            <li>Fresh cream</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Health Benefits:</p>
+                            <p>Rich in iron and calcium</p>
+                        <p class='mt-4 font-semibold'>Preparation Time:</p>
+                            <p>30 minutes</p>
+                    `,
+                },
+                lamb_rogan_josh: {
+                    title: "Lamb Rogan Josh",
+                    displayPrice: "₹320",
+                    price: 320,
+                    description:
+                        "Aromatic lamb curry from Kashmir with tender pieces of meat in a rich, flavorful gravy.",
+                    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 80,
+                    isVeg: false,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Lamb pieces</li>
+                            <li>Yogurt</li>
+                            <li>Onions</li>
+                            <li>Garlic-ginger paste</li>
+                            <li>Kashmiri red chili powder</li>
+                            <li>Fennel powder</li>
+                            <li>Garam masala</li>
+                            <li>Mustard oil</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Cooking Time:</p>
+                            <p>Slow cooked for 2-3 hours</p>
+                        <p class='mt-4 font-semibold'>Origin:</p>
+                            <p>Traditional Kashmiri dish</p>
+                    `,
+                },
+
+                // Breads
+                garlic_naan: {
+                    title: "Garlic Naan",
+                    displayPrice: "₹60 per piece",
+                    price: 60,
+                    description:
+                        "Soft, leavened bread baked in tandoor with generous amounts of garlic and butter.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 20,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Maida (refined flour)</li>
+                            <li>Yogurt</li>
+                            <li>Fresh garlic</li>
+                            <li>Butter</li>
+                            <li>Nigella seeds (kalonji)</li>
+                            <li>Baking powder</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Cooking Method:</p>
+                            <p>Traditionally baked in clay tandoor</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Best with any curry or dal</p>
+                    `,
+                },
+                butter_roti: {
+                    title: "Butter Roti",
+                    displayPrice: "₹40 per piece",
+                    price: 40,
+                    description:
+                        "Whole wheat flatbread cooked on tawa and finished with butter.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Whole wheat flour</li>
+                            <li>Water</li>
+                            <li>Salt</li>
+                            <li>Butter</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Health Benefits:</p>
+                            <p>High in fiber, low in fat</p>
+                        <p class='mt-4 font-semibold'>Preparation Time:</p>
+                            <p>Freshly made in 5 minutes</p>
+                    `,
+                },
+                laccha_paratha: {
+                    title: "Laccha Paratha",
+                    displayPrice: "₹70 per piece",
+                    price: 70,
+                    description:
+                        "Flaky, multi-layered bread made with whole wheat flour and ghee.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 10,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Whole wheat flour</li>
+                            <li>Ghee</li>
+                            <li>Salt</li>
+                            <li>Water</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Preparation Technique:</p>
+                            <p>Layered by folding and rolling multiple times</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Excellent with curries or just with pickle</p>
+                    `,
+                },
+
+                // Desserts
+                gulab_jamun: {
+                    title: "Gulab Jamun",
+                    displayPrice: "₹90 (2 pieces)",
+                    price: 90,
+                    description:
+                        "Soft, spongy milk balls soaked in rose-flavored sugar syrup.",
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Khoya (milk solids)</li>
+                            <li>Maida (refined flour)</li>
+                            <li>Baking powder</li>
+                            <li>Sugar</li>
+                            <li>Rose water</li>
+                            <li>Cardamom powder</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Serving Temperature:</p>
+                            <p>Best served warm</p>
+                        <p class='mt-4 font-semibold'>Origin:</p>
+                            <p>Popular across South Asia</p>
+                    `,
+                },
+                kheer: {
+                    title: "Kheer",
+                    displayPrice: "₹110",
+                    price: 110,
+                    description:
+                        "Creamy rice pudding made with milk, sugar, and flavored with cardamom and nuts.",
+                    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Basmati rice</li>
+                            <li>Full cream milk</li>
+                            <li>Sugar</li>
+                            <li>Cardamom</li>
+                            <li>Cashews</li>
+                            <li>Raisins</li>
+                            <li>Saffron strands</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Cooking Time:</p>
+                            <p>Slow cooked for 1-2 hours</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Chilled or at room temperature</p>
+                    `,
+                },
+                rasmalai: {
+                    title: "Rasmalai",
+                    displayPrice: "₹120 (2 pieces)",
+                    price: 120,
+                    description:
+                        "Soft cottage cheese patties soaked in sweetened, flavored milk.",
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Paneer (cottage cheese)</li>
+                            <li>Milk</li>
+                            <li>Sugar</li>
+                            <li>Cardamom</li>
+                            <li>Saffron</li>
+                            <li>Pistachios</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Preparation Time:</p>
+                            <p>Requires 3-4 hours of soaking</p>
+                        <p class='mt-4 font-semibold'>Origin:</p>
+                            <p>Bengali sweet from Eastern India</p>
+                    `,
+                },
+            };
+
+            function openPopup(itemId) {
+                currentItemId = itemId;
+                const item = menuItems[itemId];
+                document.getElementById("popup-image").src = item.image;
+                document.getElementById("popup-title").textContent = item.title;
+                document.getElementById("popup-price").textContent =
+                    item.displayPrice;
+                document.getElementById("popup-description").textContent =
+                    item.description;
+                document.getElementById("popup-spice-level").style.width =
+                    item.spiceLevel + "%";
+                document.getElementById("popup-details").innerHTML =
+                    item.details;
+                document.getElementById("quantity").value = 1;
+
+                // Set veg/non-veg icon
+                const vegNonVegElement =
+                    document.getElementById("popup-veg-nonveg");
+                if (item.isVeg) {
+                    vegNonVegElement.innerHTML = `
+                        <span class="veg-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </span>
+                    `;
+                } else {
+                    vegNonVegElement.innerHTML = `
+                        <span class="non-veg-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </span>
+                    `;
+                }
+
+                document.getElementById("popup").classList.remove("hidden");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closePopup() {
+                document.getElementById("popup").classList.add("hidden");
+                document.body.style.overflow = "auto";
+            }
+
+            // Quantity Functions
+            function changeQuantity(amount) {
+                const quantityInput = document.getElementById("quantity");
+                let currentQuantity = parseInt(quantityInput.value);
+                currentQuantity = Math.max(1, currentQuantity + amount);
+                quantityInput.value = currentQuantity;
+            }
+
+            function updateQuantity() {
+                const quantityInput = document.getElementById("quantity");
+                if (parseInt(quantityInput.value) < 1) {
+                    quantityInput.value = 1;
+                }
+            }
+
+            // Cart Functions
+            function addToCart() {
+                const quantity = parseInt(
+                    document.getElementById("quantity").value,
+                );
+                const item = menuItems[currentItemId];
+
+                const cartItem = {
+                    id: currentItemId,
+                    name: item.title,
+                    price: item.price,
+                    quantity: quantity,
+                    image: item.image,
+                };
+
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existingIndex = cart.findIndex(
+                    (i) => i.id === currentItemId,
+                );
+
+                if (existingIndex > -1) {
+                    cart[existingIndex].quantity += quantity;
+                } else {
+                    cart.push(cartItem);
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+                alert(`${quantity} ${item.title} added to cart!`);
+                closePopup();
+            }
+
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const totalItems = cart.reduce(
+                    (sum, item) => sum + item.quantity,
+                    0,
+                );
+                document.getElementById("cart-count").textContent = totalItems;
+            }
+
+            // Initialize cart count on page load
+            updateCartCount();
+
+            // Close popup when clicking outside of it
+            document
+                .getElementById("popup")
+                .addEventListener("click", function (e) {
+                    if (e.target === this) {
+                        closePopup();
+                    }
+                });
+        </script>
+    </body>
+</html>

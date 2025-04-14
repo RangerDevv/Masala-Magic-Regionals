@@ -16,75 +16,140 @@
     <meta name="keywords" content="Enjoy Vegetarian Indian Cuisine">
 </head>
 <body>
+
+    <nav class="flex flex-row justify-between items-center p-5 top-2 sticky m-2 rounded-2xl z-50 shadow-xl">
+        <a href="#" class="AK-logo w-16"><img src="src/imgs/Masala Magic.png" alt=""></a>
+        <ul class="flex flex-row gap-5">
+            <li><a href="/src/menu.html">Our Menu</a></li>
+            <li><a href="/src/approach.html">Our Approach</a></li>
+            <li><a href="#our_mission">Our Mission</a></li>
+        </ul>
+    </nav>
+
     <!-- Start header -->
+    <header class=" w-full overflow-hidden">
+      <!-- Video Background Container -->
+      <div class="absolute inset-0 z-0">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover brightness-[85%]">
+          <source src="./src/imgs/rotating_food.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <!-- Optional: Dark overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
 
-    <header class="flex flex-row justify-between overflow-clip w-[100vw]">
-        <div class="flex flex-col justify-start gap-10 h-screen">
-            <img src="https://plus.unsplash.com/premium_photo-1669742928112-19364a33b530?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Delicious Food" class="img-outline-left w-96 h-auto rounded-2xl -translate-x-[20%]">
-            <img src="https://plus.unsplash.com/premium_photo-1669742928112-19364a33b530?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Delicious Food" class="w-96 h-auto rounded-2xl -translate-x-[20%]">
-            </div>
+      <!-- Content Container -->
+      <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
+        <!-- Logo with subtle animation -->
+        <img
+          src="src/imgs/Masala Magic.png"
+          alt="Masala Magic"
+          class="w-[24rem] h-auto rounded-2xl mx-auto transform transition-all duration-500 hover:scale-105"
+        >
 
-            <div class="flex flex-col justify-start items-center">
+        <!-- Headline with animated underline -->
+        <div class="mt-8 max-w-4xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Step Right in Through the Door of
+            <span class="relative inline-block">
+              Authentic Indian Cuisine
+              <span class="absolute bottom-0 left-0 w-full h-1 bg-lime-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </span>
+          </h1>
 
-                <img src="src/imgs/Masala Magic.png" alt="Masala Magic" class="w-[30rem] h-auto rounded-2xl mx-auto">
-
-                <h2 class="text-4xl pt-10 text-center">Step Right in Through the Door Step of Authentic Indian Cuisine</h2>
-
-
-                <div class="flex flex-row justify-center gap-10 pt-10">
-                    <button class="text-xl bg-lime-300 px-3 py-3 rounded-xl">Menu</button>
-                    <button class="text-xl bg-lime-300 px-3 py-3 rounded-xl">Learn More</button>
-                </div>
-            </div>
-
-            <div class="flex flex-col justify-start gap-10 h-screen">
-                <img src="src/imgs/GulabJamun.png" alt="Delicious Food" class="w-96 h-auto rounded-2xl translate-x-[20%]">
-                <img src="https://plus.unsplash.com/premium_photo-1669742928112-19364a33b530?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Delicious Food" class="w-96 h-auto rounded-2xl translate-x-[20%]">
+          <!-- Hours/Location with icons -->
+          <div class="text-xl md:text-2xl text-white mt-6 space-y-2">
+            <p class="flex items-center justify-center gap-2">
+              <span class="text-lime-300">⏰</span> 10AM-4PM Monday-Friday
+            </p>
+            <p class="flex items-center justify-center gap-2">
+              <span class="text-lime-300">📍</span> 5615 Hobart Street Pittsburgh PA
+            </p>
+          </div>
         </div>
-    </header>
 
-    
+        <!-- Buttons with hover effects -->
+        <div class="flex flex-col sm:flex-row gap-4 md:gap-8 mt-10">
+          <button class="px-8 py-3 text-xl font-medium bg-lime-300 hover:bg-lime-400 text-gray-900 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+            Explore Our Menu
+          </button>
+          <button class="px-8 py-3 text-xl font-medium bg-transparent border-2 border-lime-300 hover:bg-lime-300/20 text-white rounded-xl transition-all duration-300 transform hover:-translate-y-1">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </header>
     <!-- End Landing -->
       <!-- Start Our Mission -->
     <!-- Our Mission Section -->
-<section class="mission-section" id="our-mission">
+<section class="mission-section pt-24" id="our_mission">
     <h2 class="main-title">Our Mission</h2>
 
     <!-- First Mission Box -->
-    <div class="flex flex-row justify-center items-center gap-12 px-10 slide-in left">
-        <div class="mission-image">
-            <img src="src/imgs/mission-image.png" alt="Mission Image" class="w-full p-16 h-auto">
+    <div class="flex flex-row relative">
+        <!-- Content Column -->
+        <div class="w-1/2">
+            <!-- Mission Section 1 -->
+            <div class="flex flex-row-reverse justify-center items-center gap-12 px-10 h-[100vh] pt-32" data-section="1">
+                <div class="flex flex-col gap-8 w-full h-auto">
+                    <h2 class="text-5xl font-bold opacity-0 animate-fade-in [animation-fill-mode:forwards]">Bringing the Taste of Family and Culture Right to Your Table</h2>
+                    <p class="text-3xl opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:100ms]">At Masala Magic, we believe the best memories are made around the table. Our dishes are crafted to spark joy, conversation, and togetherness—just like the vibrant family feasts we grew up with. From grandparents sharing stories to kids trying new flavors, every bite is an invitation to connect, laugh, and savor the magic of shared meals. </p>
+                    <button class="text-xl bg-lime-300 p-3 pb-2 rounded-xl w-28 hover:bg-lime-400 transition-colors opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:200ms]">Menu</button>
+                </div>
+            </div>
+
+            <!-- Mission Section 2 -->
+            <div class="flex flex-row-reverse justify-center items-center gap-12 px-10 h-[100vh] pt-32" data-section="2">
+                <div class="flex flex-col gap-8 w-full h-auto">
+                    <h2 class="text-5xl font-bold opacity-0 animate-fade-in [animation-fill-mode:forwards]">Handcrafted with Love</h2>
+                    <p class="text-3xl opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:100ms]">No shortcuts, no artificial flavors—just the kind of food made with patience and passion. Our recipes are passed down through generations, slow-cooked to perfection, and served with the warmth of home. Because food isn’t just eaten; it’s felt.</p>
+                    <button class="text-xl bg-lime-300 p-3 pb-2 rounded-xl w-28 hover:bg-lime-400 transition-colors opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:200ms]">Menu</button>
+                </div>
+            </div>
+
+            <!-- Mission Section 3 -->
+            <div class="flex flex-row-reverse justify-center items-center gap-12 px-10 h-[100vh] pt-32" data-section="3">
+                <div class="flex flex-col gap-8 w-full h-auto">
+                    <h2 class="text-5xl font-bold opacity-0 animate-fade-in [animation-fill-mode:forwards]">Feed with Respect, Nurture the Earth</h2>
+                    <p class="text-3xl opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:100ms]">We believe in ahimsa (non-harm) beyond the plate—eco-friendly packaging, zero-waste kitchens, and mindful sourcing. When you dine with us, you’re not just enjoying a meal; you’re honoring the planet that provides it.</p>
+                    <a href="/src/approach.html"><button class="text-xl bg-lime-300 p-3 pb-2 w-44 rounded-xl hover:bg-lime-400 transition-colors opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:200ms]">Learn More</button></a>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-col gap-2 w-[50vw] h-auto">
-            <h2 class="text-4xl font-semibold">Bringing the Taste of Family and Culture Right to Your Table</h2>
-            <p class="text-2xl">We bring you the timeless flavors of Japan, reimagined with a vegan and vegetarian twist. Our dishes are inspired by the rich culinary heritage of Japan, crafted with plant-based ingredients that honor the balance, simplicity, and elegance of washoku (Japanese cuisine).</p>
-        </div>
-    </div>
-    
-    <!-- Second Mission Box -->
-    <div class="mission-box slide-in right">
-        <div class="mission-text">
-            <h2>Organic and Sustainable Farming</h2>
-            <p>Our farmers grow products without harmful chemicals, ensuring a healthy and nutritious dining experience.</p>
-        </div>
-        <div class="mission-image">
-            <img src="src/imgs/sustainability.png" alt="Sustainability Image">
+
+
+        <!-- Sticky Images Column - Now as a proper stack -->
+        <div class="w-1/2 h-screen sticky top-0 overflow-hidden pl-8 pr-16 pt-32">
+            <div class="relative h-full w-full">
+                <!-- Image 1 (Top of stack) -->
+                <div class="absolute w-full h-[70%] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                     data-image="1">
+                    <img src="https://t3.ftcdn.net/jpg/01/92/27/46/360_F_192274605_vQJlBC2MPS2RE8FhknkwYpUinTTqpWva.jpg"
+                         alt="Family meal"
+                         class="w-full h-full object-cover rounded-2xl shadow-xl opacity-0 translate-y-10 rotate-[-2deg] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                </div>
+
+                <!-- Image 2 (Middle of stack) -->
+                <div class="absolute w-[90%] h-[65%] left-[5%] top-[10%] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                     data-image="2">
+                    <img src="https://admin.wellandgood.com/wp-content/uploads/sites/3/2020/12/vegan-indian-dumplings-1.jpg"
+                         alt="Handcrafted food"
+                         class="w-full h-full object-cover rounded-2xl shadow-xl opacity-0 translate-y-10 rotate-[3deg] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                </div>
+
+                <!-- Image 3 (Bottom of stack) -->
+                <div class="absolute w-[85%] h-[60%] left-[7.5%] top-[20%] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                     data-image="3">
+                    <img src="https://img.freepik.com/premium-photo/traditional-indian-food-platter-served-banana-leaf-with-assorted-curries-rice-dumplings_1293074-210440.jpg"
+                         alt="Sustainable food"
+                         class="w-full h-full object-cover rounded-2xl shadow-xl opacity-0 translate-y-10 rotate-[-1deg] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Third Mission Box -->
-    <div class="mission-box slide-in left">
-        <div class="mission-image">
-            <img src="src/imgs/green-future.png" alt="Green Future Image">
-        </div>
-        <div class="mission-text">
-            <h2>Building a Greener Future</h2>
-            <p>Supporting organic farming helps create a sustainable food supply for the future.</p>
-        </div>
-    </div>
 </section>
-        
-    </div>
+
     <section class="flex flex-col sm:flex-row items-center justify-center sm:w-[100%] sm:h-screen bg-black p-12 gap-8">
         <div id="section1Main" class="sm:w-1/2 h-full bg-gray-500 rounded-2xl flex flex-col justify-center items-center gap-12">
             <div class="flex flex-col gap-12 w-full h-full justify-center items-center">
@@ -104,7 +169,7 @@
             <div id="section3Main" class="h-1/2 bg-green-700 rounded-2xl flex flex-col justify-center items-center">
                 <div class="flex flex-col gap-12 w-full h-full justify-center items-center py-24 p-10" id="section1">
                     <h2 class="text-2xl sm:text-5xl font-bold text-white ">We Lead Innovation: Learn More About Our Commitments
-                        <a href="/approach">
+                        <a href="./src/approach.html">
                             <span class=" pb-3 mb-3 px-3 text-3xl font-extrabold text-black rounded-full bg-[#D6FA32]">
                                 <strong>→</strong>
                             </span>
@@ -115,22 +180,235 @@
         </div>
     </section>
 
-    <!-- End Articles -->
-    <!-- Start Gallery -->
-    
-    <!-- End Gallery -->
+    <section class="reviews-section py-20 px-4 sm:px-10" data-scroll-section>
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-6xl font-bold mb-6 text-gray-900">
+          <span class="text-yellow-600">Spice</span>-Infused Praise
+        </h2>
+        <p class="text-2xl max-w-xl mx-auto">
+          Don't just take our word for it—here's what our customers say!
+        </p>
+      </div>
 
-    <!-- Start Footer -->
+      <!-- Reviews Carousel -->
+      <div class="reviews-carousel relative max-w-7xl mx-auto">
+        <!-- Reviews Container -->
+        <div class="reviews-container flex overflow-x-auto snap-x snap-mandatory scroll-smooth py-6 px-2 gap-8 no-scrollbar">
+          <!-- Review Card 1 -->
+          <div class="review-card snap-center flex-shrink-0 w-full sm:w-2/3 lg:w-1/2 bg-white rounded-3xl overflow-hidden transition-all">
+            <div class="flex flex-col lg:flex-row h-full">
+              <div class="lg:w-1/2 p-8 flex flex-col justify-between">
+                <div>
+                  <div class="flex mb-4">
+                    ★★★★★ <span class="text-amber-500 ml-2">5/5</span>
+                  </div>
+                  <p class="text-2xl italic text-gray-700 mb-6">
+                    "The Butter Chicken transported me straight to Delhi! Creamy, perfectly spiced, and the naan was pillow-soft."
+                  </p>
+                </div>
+                <div>
+                  <p class="font-bold text-xl">- Priya Sharma</p>
+                  <p class="text-gray-500">Regular since 2020</p>
+                </div>
+              </div>
+              <div class="lg:w-1/2 h-64 lg:h-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Butter Chicken"
+                  class="w-full h-full object-cover"
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 2 -->
+          <div class="review-card snap-center flex-shrink-0 w-full sm:w-2/3 lg:w-1/2 bg-white rounded-3xl overflow-hidden transition-all">
+            <div class="flex flex-col lg:flex-row h-full">
+              <div class="lg:w-1/2 p-8 flex flex-col justify-between">
+                <div>
+                  <div class="flex mb-4">
+                    ★★★★☆ <span class="text-amber-500 ml-2">4/5</span>
+                  </div>
+                  <p class="text-2xl italic text-gray-700 mb-6">
+                    "The Masala Dosa was crispy perfection! Chutneys had the ideal balance of sweet and spicy. Will be back weekly!"
+                  </p>
+                </div>
+                <div>
+                  <p class="font-bold text-xl">- Raj Patel</p>
+                  <p class="text-gray-500">First-time visitor</p>
+                </div>
+              </div>
+              <div class="lg:w-1/2 h-64 lg:h-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1588&q=80"
+                  alt="Masala Dosa"
+                  class="w-full h-full object-cover"
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 3 -->
+          <div class="review-card snap-center flex-shrink-0 w-full sm:w-2/3 lg:w-1/2 bg-white rounded-3xl overflow-hidden transition-all">
+            <div class="flex flex-col lg:flex-row h-full">
+              <div class="lg:w-1/2 p-8 flex flex-col justify-between">
+                <div>
+                  <div class="flex mb-4">
+                    ★★★★★ <span class="text-amber-500 ml-2">5/5</span>
+                  </div>
+                  <p class="text-2xl italic text-gray-700 mb-6">
+                    "Best Chai outside of Mumbai! The cardamom aroma alone is worth the visit. Samosas are perfectly flaky too."
+                  </p>
+                </div>
+                <div>
+                  <p class="font-bold text-xl">- Aisha Khan</p>
+                  <p class="text-gray-500">Chai enthusiast</p>
+                </div>
+              </div>
+              <div class="lg:w-1/2 h-64 lg:h-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Masala Chai"
+                  class="w-full h-full object-cover"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dots Indicator -->
+        <div class="flex justify-center mt-8 gap-2">
+          <button class="w-3 h-3 rounded-full bg-amber-200 dot-indicator active"></button>
+          <button class="w-3 h-3 rounded-full bg-amber-200 dot-indicator"></button>
+          <button class="w-3 h-3 rounded-full bg-amber-200 dot-indicator"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom CSS -->
+    <style>
+      /* Hide scrollbar but keep functionality */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Review Card Styling */
+      .review-card {
+        scroll-snap-align: center;
+        transition: transform 0.3s ease;
+      }
+      .review-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Star Ratings */
+      .review-card .flex {
+        color: #f59e0b;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+      }
+
+      /* Carousel Navigation */
+      .carousel-prev, .carousel-next {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Active Dot Indicator */
+      .dot-indicator.active {
+        background: #f59e0b;
+        transform: scale(1.3);
+      }
+    </style>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.reviews-container');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const dots = document.querySelectorAll('.dot-indicator');
+        let currentIndex = 0;
+
+        // Update active dot
+        function updateDots() {
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+          });
+        }
+
+        // Next slide
+        nextBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % dots.length;
+          scrollToCard();
+        });
+
+        // Previous slide
+        prevBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + dots.length) % dots.length;
+          scrollToCard();
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            currentIndex = index;
+            scrollToCard();
+          });
+        });
+
+        // Scroll to current card
+        function scrollToCard() {
+          const cardWidth = document.querySelector('.review-card').offsetWidth;
+          container.scrollTo({
+            left: currentIndex * (cardWidth + 32), // 32px gap
+            behavior: 'smooth'
+          });
+          updateDots();
+        }
+
+    </script>
+
+    <section class="flex flex-row justify-between items-center h-screen sm:h-full w-screen pt-16" data-scroll-section data-scroll-delay="0.1" data-scroll-speed="2">
+        <div class="flex flex-col gap-5 -translate-x-48">
+            <img src="src/imgs/image-0.png" class="w-96 h-auto rounded-lg hidden sm:block">
+            <img src="src/imgs/image-1.png" class="w-96 h-auto rounded-lg hidden sm:block">
+            <img src="src/imgs/image-2.png" class="w-96 h-auto rounded-lg hidden sm:block">
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-16">
+            <p class="text-6xl text-center font-extrabold">Are You Hungry Yet?</p>
+            <div class="flex flex-col gap-4">
+                <button class="text-xl bg-lime-300 p-3 pb-2 rounded-xl">Order Now</button>
+                <a href="/src/reserveATable.html"><button class="text-xl bg-lime-300 p-3 pb-2 rounded-xl">Reserve A Table</button></a>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-5 translate-x-48">
+            <img src="src/imgs/image-3.png" class="w-96 h-auto rounded-lg hidden sm:block"/>
+            <img src="src/imgs/image-4.png" class="w-96 h-auto rounded-lg hidden sm:block"/>
+            <img src="src/imgs/image-5.png" class="w-96 h-auto rounded-lg hidden sm:block"/>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="box">
-                <a href="#" class="AK-logo"><img src="src/imgs/Masala Magic.png" alt="">Masala Magic</a>
+                <a href="#" class="AK-logo"><img class="h-auto w-26 ml-11 pb-8" src="/src/imgs/Masala Magic.png" alt=""></a>
                 <ul class="icons">
                     <li class="facebook"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li class="twitter"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></i></a></li>
                     <li class="youtube"><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
-                <p>Enjoy Delicious Indian Cuisine</p>
             </div>
             <div class="box">
                 <ul>
@@ -146,10 +424,10 @@
                     <div class="line"><i class="fas fa-phone-volume fa-fw"></i><div class="phones"><span class="info">(412)***-****</span></div></div>
                 </address>
             </div>
-    
+
         </div>
         <div class="last-info">
-            <p>I Would Like To Thank <span><a target="_blank">Our Customers</a></span> For Their Continous Support</p>
+            <p>We Would Like To Thank <span><a target="_blank">Our Customers</a></span> For Their Continous Support</p>
             <p>© <span class="currentYear">2024</span> <span>Masala Magic Company</span> All Rights Reserved</p>
         </div>
     </footer>
@@ -175,9 +453,70 @@ window.addEventListener("scroll", function () {
         });
     });
 </script>
-        
 
+<style>
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 0.8s ease-out forwards;
+    }
+
+    /* Custom easing for natural movement */
+    .ease-stack { transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('[data-section]');
+        const images = document.querySelectorAll('[data-image]');
+
+        // Initial state - only show first image
+        document.querySelector('[data-image="1"] img').style.opacity = '1';
+        document.querySelector('[data-image="1"] img').style.transform = 'translateY(0) rotate(-2deg)';
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const sectionNum = entry.target.getAttribute('data-section');
+
+                if (entry.isIntersecting) {
+                    // Hide all images first
+                    images.forEach(imgContainer => {
+                        const img = imgContainer.querySelector('img');
+                        img.style.opacity = '0';
+                        img.style.transform = 'translateY(10px)';
+                    });
+
+                    // Show current image with slight rotation
+                    const currentImg = document.querySelector(`[data-image="${sectionNum}"] img`);
+                    if (currentImg) {
+                        currentImg.style.opacity = '1';
+                        currentImg.style.transform = 'translateY(0)';
+
+                        // Bring this image to front
+                        images.forEach(container => {
+                            container.style.zIndex = '0';
+                        });
+                        document.querySelector(`[data-image="${sectionNum}"]`).style.zIndex = '10';
+                    }
+
+                    // Animate content
+                    const contentElements = entry.target.querySelectorAll('h2, p, button, a');
+                    contentElements.forEach((el, index) => {
+                        el.style.animationDelay = `${index * 100}ms`;
+                        el.classList.add('animate-fade-in');
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => observer.observe(section));
+
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+    });
+</script>
 </body>
 </html>
-
-

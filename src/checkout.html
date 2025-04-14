@@ -26,11 +26,11 @@
         </div>
     </header>
     <!-- Main Content -->
- 
+
     <form action="/submit-order" method="POST" class="order-form" id="orderForm">
         <!-- Dynamic Items Will Be Added Here -->
         <div id="orderItems"></div>
-        
+
         <!-- Total Cost -->
         <div class="total-cost">
             <label>Total:</label>
@@ -58,7 +58,7 @@
 
     // Adding an event listener to the "Browse for More" button
     document.getElementById('browseMoreButton').addEventListener('click', function() {
-        window.location.href = 'index.html#Menu'; // Redirect to the menu section
+        window.location.href = 'menu.html'; // Redirect to the menu page
     });
 </script>
 
@@ -277,34 +277,34 @@
         function updateOrderDisplay() {
             const orderItemsContainer = document.getElementById("orderItems");
             const totalCostElement = document.getElementById("totalCost");
-    
+
             // Clear previous items
             orderItemsContainer.innerHTML = "";
-    
+
             // Retrieve cart from localStorage
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             let totalCost = 0;
-    
+
             // Add each item to the order display
             cart.forEach(item => {
                 const itemDiv = document.createElement("div");
                 itemDiv.classList.add("menu-item");
-    
+
                 const itemLabel = document.createElement("label");
                 itemLabel.textContent = `${item.name} - $${item.price.toFixed(2)}`;
                 itemDiv.appendChild(itemLabel);
-    
+
                 // Quantity input
                 const quantityLabel = document.createElement("label");
                 quantityLabel.classList.add("quantity-label");
                 quantityLabel.textContent = "Quantity:";
-    
+
                 const quantityInput = document.createElement("input");
                 quantityInput.type = "number";
                 quantityInput.value = item.quantity;
                 quantityInput.min = 1;
                 quantityInput.classList.add("quantity-input");
-    
+
                 // Update quantity and total cost when changed
                 quantityInput.addEventListener("input", function() {
                     item.quantity = parseInt(quantityInput.value, 10);
@@ -312,18 +312,18 @@
                     localStorage.setItem("cart", JSON.stringify(cart));
                     updateOrderDisplay();
                 });
-    
+
                 itemDiv.appendChild(quantityLabel);
                 itemDiv.appendChild(quantityInput);
                 orderItemsContainer.appendChild(itemDiv);
-    
+
                 totalCost += item.price * item.quantity;
             });
-    
+
             // Update total cost display
             totalCostElement.textContent = `$${totalCost.toFixed(2)}`;
         }
-    
+
         // Call updateOrderDisplay() to initialize the cart on page load
         window.onload = function() {
             updateOrderDisplay();
@@ -431,7 +431,7 @@
 }
 
 </style>
-</main>    
- 
+</main>
+
 </body>
 </html>
