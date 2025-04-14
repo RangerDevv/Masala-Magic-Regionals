@@ -1,79 +1,423 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Efficient Equipment | Masala Magic</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;400;600;700;800;900;1000&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="imgs/Masala Magic.png">
-    <meta name="description" content="Learn more about Masala Magic's Energy Efficient Equipment.">
-    <meta name="keywords" content="Energy Efficient Equipment, Sustainability, Energy Saving, Masala Magic">
-    <meta name="author" content="Masala Magic">
-</head>
-<body>
-    <!-- Start Header -->
-    <header id="header">
-        <div class="container">
-            <a href="index.html" class="mainlogo"><img src="imgs/Masala Magic.png" alt="Logo"> Masala Magic</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html#our_mission" class="nav-a nav-otherL">Our Mission</a></li>
-                    <li><a href="index.html#our_process" class="nav-a">Our Process</a></li>
-                    <li><a href="index.html#Menu" class="nav-a">Our Menu</a></li>
-                    <li><a href="reservation.html" class="nav-a">Reservation</a></li>
-                    <li><a href="checkout.html" class="nav-a"><img src="imgs/ShoppingCart.png" alt=""></a></li>
-                    <li><a href="References.html" class="nav-a">References</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- End Header -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sourcing & Cultivation | Masala Magic</title>
+        <link rel="stylesheet" href="./css/normalize.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;400;600;700;800;900;1000&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="../imgs/Masala Magic.png" />
+        <meta
+            name="description"
+            content="Learn about Masala Magic's sourcing and cultivation practices."
+        />
+        <meta
+            name="keywords"
+            content="Farm to Table, Sourcing, Cultivation, Organic, Masala Magic"
+        />
+        <meta name="author" content="Masala Magic" />
+        <style>
+            /* Global Styles */
+            body {
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
 
-    <!-- Start Main Section -->
-    <main>
-        <div class="container">
-            <div class="main-title">Energy Efficient Equipment</div>
-            <div class="dish-details">
-                <div class="dish-description">
-                    <h2>What is Energy-Efficient Equipment?</h2>
+            /* Header Styles */
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            header .mainlogo {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: #e66611;
+                text-decoration: none;
+            }
+
+            header .mainlogo img {
+                height: 40px;
+                margin-right: 10px;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            nav ul li {
+                margin-left: 20px;
+            }
+
+            nav ul li a {
+                color: #333;
+                text-decoration: none;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+            nav ul li a:hover {
+                color: #ff6f61;
+            }
+
+            /* Hero Section */
+            .process-hero {
+                height: 60vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url("./imgs/farm.jpg") no-repeat center center/cover;
+                color: #fff;
+            }
+
+            .process-hero-content {
+                max-width: 800px;
+                padding: 20px;
+            }
+
+            .process-hero h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            .process-hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+                animation: fadeIn 1.5s ease-in-out;
+            }
+
+            /* Process Detail Section */
+            .process-detail {
+                padding: 80px 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .process-detail h2 {
+                font-size: 2.5rem;
+                color: #e66611;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .process-detail-content {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                align-items: center;
+                margin-bottom: 60px;
+            }
+
+            .process-detail-text {
+                flex: 1;
+                min-width: 300px;
+            }
+
+            .process-detail-text h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .process-detail-text p {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                margin-bottom: 20px;
+            }
+
+            .process-detail-image {
+                flex: 1;
+                min-width: 300px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .process-detail-image img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.5s ease;
+            }
+
+            .process-detail-image img:hover {
+                transform: scale(1.05);
+            }
+
+            /* Benefits Section */
+            .benefits {
+                background: #f9f9f9;
+                padding: 80px 20px;
+            }
+
+            .benefits-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .benefits h2 {
+                font-size: 2.5rem;
+                color: #e66611;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .benefit-card {
+                background: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .benefit-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .benefit-card h3 {
+                font-size: 1.5rem;
+                color: #333;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+            }
+
+            .benefit-card h3 i {
+                margin-right: 10px;
+                color: #e66611;
+            }
+
+            .benefit-card p {
+                font-size: 1rem;
+                line-height: 1.7;
+                color: #555;
+            }
+
+            /* Back Button */
+            .back-button {
+                display: inline-block;
+                margin: 40px auto;
+                padding: 15px 30px;
+                background: #e66611;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 30px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                text-align: center;
+                border: 2px solid #e66611;
+            }
+
+            .back-button:hover {
+                background: transparent;
+                color: #e66611;
+            }
+
+            /* Footer Styles */
+            footer {
+                background: #333;
+                color: #fff;
+                text-align: center;
+                padding: 30px 0;
+                margin-top: 80px;
+            }
+
+            /* Animations */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .process-hero {
+                    height: 50vh;
+                    margin-top: 70px;
+                }
+
+                .process-hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                .process-hero p {
+                    font-size: 1rem;
+                }
+
+                .process-detail h2,
+                .benefits h2 {
+                    font-size: 2rem;
+                }
+
+                .process-detail-text h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Start Header -->
+        <section
+            class="process-hero"
+            style="
+                background-image:
+                    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url(&quot;./imgs/servingfood.jpg&quot;);
+            "
+        >
+            <div class="process-hero-content">
+                <h1>The Final Plate</h1>
+                <p>The culmination of our farm-to-table journey</p>
+            </div>
+        </section>
+
+        <!-- Process Detail Section -->
+        <section class="process-detail">
+            <h2>Step 4: Thoughtful Presentation</h2>
+            <div class="process-detail-content">
+                <div class="process-detail-text">
+                    <h3>From Our Kitchen to Your Table</h3>
                     <p>
-                        Energy-efficient sustainable operations at Masala Magic revolve around the acquisition of energy-saving appliances and equipment. 
-                        We use induction cooktops and energy-saving ovens for cooking. We use smart refrigerators—energy-saving appliances—for refrigeration and freezing. 
-                        These energy-saving alternatives require less energy draw; however, they still provide the same temperature settings and ranges as required for any restaurant.
+                        Our servers receive extensive training on every dish's
+                        ingredients and preparation to answer any questions.
                     </p>
-                    <h2>Why It Matters:</h2>
                     <p>
-                        Utilizing this equipment reduces greenhouse gas emissions but also reduces energy costs in the long run. We also have a water-saving dishwasher and low-wattage light bulbs. 
-                        Since most energy-efficient appliances were gifted from Masala Magic in the registry, it goes to show that energy efficiency goes hand in hand with efficient eating.
+                        We accommodate all dietary requests without compromising
+                        on flavor or presentation.
                     </p>
-                    <h2>Our Commitment to Energy Efficiency:</h2>
                     <p>
-                        These appliances help our sustainable efforts but simultaneously keep us running cost-effectively without compromising our ability to continually serve fresh, 
-                        high-quality meals to our patrons.
+                        Every plate tells the story of its ingredients' journey
+                        from farm to table.
                     </p>
                 </div>
+                <div class="process-detail-image">
+                    <img
+                        src="../imgs/plating-detail.jpg"
+                        alt="Beautifully plated food"
+                    />
+                </div>
             </div>
-            <a href="index.html#our_process" class="back-to-menu"><i class="fas fa-arrow-left"></i> Back to Our Process</a>
-        </div>
-    </main>
-    <!-- End Main Section -->
+        </section>
 
-    <!-- Start Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2024 Masala Magic. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- End Footer -->
-    <style>
-        body {
-    padding-top: 100px;
-}
-</style>
-</body>
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="benefits-container">
+                <h2>Dining Experience</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>
+                            <i class="fas fa-concierge-bell"></i> Attentive
+                            Service
+                        </h3>
+                        <p>
+                            Our staff knows each dish intimately to guide your
+                            perfect dining experience.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-utensils"></i> Customization</h3>
+                        <p>
+                            Modify any dish to your preferences without
+                            sacrificing quality.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>
+                            <i class="fas fa-heart"></i> Complete Satisfaction
+                        </h3>
+                        <p>
+                            We stand behind every bite with our 100%
+                            satisfaction guarantee.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center">
+                <a href="../farm-to-table.html" class="back-button"
+                    ><i class="fas fa-arrow-left"></i> Back to Farm-to-Table
+                    Process</a
+                >
+            </div>
+        </section>
+
+        <script>
+            // Animation for elements when they come into view
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll(
+                    ".process-detail-content, .benefit-card",
+                );
+
+                elements.forEach((element) => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = "1";
+                        element.style.transform = "translateY(0)";
+                    }
+                });
+            };
+
+            // Set initial state
+            window.addEventListener("DOMContentLoaded", () => {
+                const elements = document.querySelectorAll(
+                    ".process-detail-content, .benefit-card",
+                );
+
+                elements.forEach((element) => {
+                    element.style.opacity = "0";
+                    element.style.transform = "translateY(20px)";
+                    element.style.transition =
+                        "opacity 0.6s ease, transform 0.6s ease";
+                });
+
+                // Trigger first check
+                animateOnScroll();
+            });
+
+            // Add scroll event listener
+            window.addEventListener("scroll", animateOnScroll);
+        </script>
+    </body>
 </html>
