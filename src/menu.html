@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Magic Masala Menu</title>
+        <title>Green Masala - Vegetarian Menu</title>
         <link rel="stylesheet" href="./css/output.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/all.min.css" />
@@ -13,7 +13,7 @@
             .menu-header {
                 background:
                     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+                    url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
                 background-size: cover;
                 background-position: center;
             }
@@ -32,18 +32,17 @@
             .veg-icon {
                 color: #22c55e;
             }
-            .non-veg-icon {
-                color: #ef4444;
+            .vegan-icon {
+                color: #3b82f6;
             }
         </style>
     </head>
     <body>
         <!-- Cart Indicator -->
-        <div class="fixed top-4 right-4 bg-white p-3 rounded-lg shadow-lg z-50">
-            <a
-                href="checkout.html"
-                class="flex items-center text-rose-600 hover:text-rose-700"
-            >
+        <div
+            class="fixed top-4 right-4 bg-lime-300 p-3 rounded-lg shadow-lg z-50"
+        >
+            <a href="checkout.html" class="flex items-center">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 mr-2"
@@ -63,12 +62,14 @@
         </div>
 
         <!-- Header -->
-        <header class="menu-header text-white py-16 px-4 text-center">
+        <header
+            class="menu-header text-white py-16 px-4 text-center h-[50vh] flex flex-col justify-center items-center"
+        >
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                Masala Magic Menu
+                Green Masala - Vegetarian & Vegan
             </h1>
             <p class="text-xl max-w-2xl mx-auto">
-                Authentic flavors from across India
+                Plant-based Indian cuisine with authentic flavors
             </p>
         </header>
 
@@ -76,7 +77,7 @@
             <!-- Appetizers Section -->
             <section class="mb-16">
                 <h2
-                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
+                    class="text-3xl font-extrabold mb-8 border-b-2 border-rose-600 pb-2"
                 >
                     Starters & Appetizers
                 </h2>
@@ -96,9 +97,9 @@
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Samosa
+                                    Samosa (Vegan)
                                 </h3>
-                                <span class="veg-icon">
+                                <span class="vegan-icon">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="h-6 w-6"
@@ -116,7 +117,7 @@
                                 </span>
                             </div>
                             <p class="text-gray-600 mb-3">
-                                Crispy pastry with spiced potato filling
+                                Crispy pastry with spiced potato and pea filling
                             </p>
                             <div class="flex items-center mb-3">
                                 <span class="text-sm font-medium mr-2"
@@ -130,9 +131,9 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹80</span>
+                                <span class="font-bold text-lg">$3</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -140,22 +141,22 @@
                         </div>
                     </div>
 
-                    <!-- Chicken Tikka -->
+                    <!-- Paneer Tikka -->
                     <div
                         class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                        onclick="openPopup('chicken_tikka')"
+                        onclick="openPopup('paneer_tikka')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="Chicken Tikka"
+                            src="https://images.unsplash.com/photo-1630911422741-92906a8d7a8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Paneer Tikka"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Chicken Tikka
+                                    Paneer Tikka
                                 </h3>
-                                <span class="non-veg-icon">
+                                <span class="veg-icon">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="h-6 w-6"
@@ -167,13 +168,14 @@
                                             stroke-linecap="round"
                                             stroke-linejoin="round"
                                             stroke-width="2"
-                                            d="M6 18L18 6M6 6l12 12"
+                                            d="M5 13l4 4L19 7"
                                         />
                                     </svg>
                                 </span>
                             </div>
                             <p class="text-gray-600 mb-3">
-                                Marinated chicken grilled to perfection
+                                Marinated cottage cheese grilled with bell
+                                peppers and onions
                             </p>
                             <div class="flex items-center mb-3">
                                 <span class="text-sm font-medium mr-2"
@@ -187,9 +189,9 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹220</span>
+                                <span class="font-bold text-lg">$12</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -197,22 +199,22 @@
                         </div>
                     </div>
 
-                    <!-- Paneer Pakora -->
+                    <!-- Aloo Tikki -->
                     <div
                         class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                        onclick="openPopup('paneer_pakora')"
+                        onclick="openPopup('aloo_tikki')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1630911422741-92906a8d7a8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="Paneer Pakora"
+                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Aloo Tikki"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Paneer Pakora
+                                    Aloo Tikki (Vegan)
                                 </h3>
-                                <span class="veg-icon">
+                                <span class="vegan-icon">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="h-6 w-6"
@@ -230,7 +232,7 @@
                                 </span>
                             </div>
                             <p class="text-gray-600 mb-3">
-                                Cottage cheese fritters with spices
+                                Spiced potato patties pan-fried to perfection
                             </p>
                             <div class="flex items-center mb-3">
                                 <span class="text-sm font-medium mr-2"
@@ -244,78 +246,9 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹150</span>
+                                <span class="font-bold text-lg">$12</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
-                                >
-                                    View Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Main Courses Section -->
-            <section class="mb-16">
-                <h2
-                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
-                >
-                    Main Courses
-                </h2>
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                >
-                    <!-- Butter Chicken -->
-                    <div
-                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                        onclick="openPopup('butter_chicken')"
-                    >
-                        <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="Butter Chicken"
-                            class="w-full h-48 object-cover"
-                        />
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <h3 class="text-xl font-semibold mb-2">
-                                    Butter Chicken
-                                </h3>
-                                <span class="non-veg-icon">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-6 w-6"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M6 18L18 6M6 6l12 12"
-                                        />
-                                    </svg>
-                                </span>
-                            </div>
-                            <p class="text-gray-600 mb-3">
-                                Tandoori chicken in creamy tomato gravy
-                            </p>
-                            <div class="flex items-center mb-3">
-                                <span class="text-sm font-medium mr-2"
-                                    >Spice:</span
-                                >
-                                <div class="spice-level">
-                                    <div
-                                        class="spice-level-fill"
-                                        style="width: 50%"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹280</span>
-                                <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -323,22 +256,22 @@
                         </div>
                     </div>
 
-                    <!-- Palak Paneer -->
+                    <!-- Vegetable Pakora -->
                     <div
                         class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                        onclick="openPopup('palak_paneer')"
+                        onclick="openPopup('veg_pakora')"
                     >
                         <img
                             src="https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="Palak Paneer"
+                            alt="Vegetable Pakora"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Palak Paneer
+                                    Vegetable Pakora (Vegan)
                                 </h3>
-                                <span class="veg-icon">
+                                <span class="vegan-icon">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="h-6 w-6"
@@ -356,7 +289,8 @@
                                 </span>
                             </div>
                             <p class="text-gray-600 mb-3">
-                                Cottage cheese in spinach gravy
+                                Assorted vegetables dipped in spiced chickpea
+                                batter and fried
                             </p>
                             <div class="flex items-center mb-3">
                                 <span class="text-sm font-medium mr-2"
@@ -370,9 +304,9 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹240</span>
+                                <span class="font-bold text-lg">$8</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -380,22 +314,22 @@
                         </div>
                     </div>
 
-                    <!-- Lamb Rogan Josh -->
+                    <!-- Dahi Puri -->
                     <div
                         class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                        onclick="openPopup('lamb_rogan_josh')"
+                        onclick="openPopup('dahi_puri')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="Lamb Rogan Josh"
+                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Dahi Puri"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Lamb Rogan Josh
+                                    Dahi Puri
                                 </h3>
-                                <span class="non-veg-icon">
+                                <span class="veg-icon">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="h-6 w-6"
@@ -407,13 +341,14 @@
                                             stroke-linecap="round"
                                             stroke-linejoin="round"
                                             stroke-width="2"
-                                            d="M6 18L18 6M6 6l12 12"
+                                            d="M5 13l4 4L19 7"
                                         />
                                     </svg>
                                 </span>
                             </div>
                             <p class="text-gray-600 mb-3">
-                                Aromatic lamb curry from Kashmir
+                                Crisp puris filled with potatoes, yogurt and
+                                chutneys
                             </p>
                             <div class="flex items-center mb-3">
                                 <span class="text-sm font-medium mr-2"
@@ -422,14 +357,597 @@
                                 <div class="spice-level">
                                     <div
                                         class="spice-level-fill"
-                                        style="width: 80%"
+                                        style="width: 30%"
                                     ></div>
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹320</span>
+                                <span class="font-bold text-lg">$10</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chana Chaat -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('chana_chaat')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Chana Chaat"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Chana Chaat (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Spiced chickpea salad with onions, tomatoes and
+                                lemon
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$6</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Courses Section -->
+            <section class="mb-16">
+                <h2
+                    class="text-3xl font-bold mb-8 border-b-2 border-rose-600 pb-2"
+                >
+                    Main Courses
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- Paneer Butter Masala -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('paneer_butter_masala')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Paneer Butter Masala"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Paneer Butter Masala
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Cottage cheese in rich tomato and cashew gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$16</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chana Masala -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('chana_masala')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Chana Masala"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Chana Masala (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Chickpeas cooked in aromatic onion-tomato gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$14</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dal Makhani -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('dal_makhani')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Dal Makhani"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Dal Makhani
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Slow-cooked black lentils with butter and cream
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 40%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$13</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Baingan Bharta -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('baingan_bharta')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Baingan Bharta"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Baingan Bharta (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Smoky roasted eggplant mashed with spices
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 60%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$9</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Malai Kofta -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('malai_kofta')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Malai Kofta"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Malai Kofta
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Vegetable dumplings in creamy tomato gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 30%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$18</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vegetable Korma -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('veg_korma')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Vegetable Korma"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Vegetable Korma
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Mixed vegetables in creamy cashew-coconut gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 30%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$18</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rajma Masala -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('rajma_masala')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Rajma Masala"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Rajma Masala (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Red kidney beans in spicy tomato gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 60%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$15</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sarson Ka Saag -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('sarson_ka_saag')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Sarson Ka Saag"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Sarson Ka Saag (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Mustard greens cooked with spices
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 40%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$13</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mushroom Masala -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('mushroom_masala')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Mushroom Masala"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Mushroom Masala
+                                </h3>
+                                <span class="veg-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Button mushrooms in onion-tomato gravy
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$8</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -442,7 +960,7 @@
             <!-- Breads Section -->
             <section class="mb-16">
                 <h2
-                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
+                    class="text-3xl font-bold mb-8 border-b-2 border-rose-600 pb-2"
                 >
                     Indian Breads
                 </h2>
@@ -496,9 +1014,9 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹60</span>
+                                <span class="font-bold text-lg">$6</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -506,22 +1024,22 @@
                         </div>
                     </div>
 
-                    <!-- Butter Roti -->
+                    <!-- Tandoori Roti -->
                     <div
                         class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                        onclick="openPopup('butter_roti')"
+                        onclick="openPopup('tandoori_roti')"
                     >
                         <img
                             src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="Butter Roti"
+                            alt="Tandoori Roti"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Butter Roti
+                                    Tandoori Roti (Vegan)
                                 </h3>
-                                <span class="veg-icon">
+                                <span class="vegan-icon">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="h-6 w-6"
@@ -539,7 +1057,7 @@
                                 </span>
                             </div>
                             <p class="text-gray-600 mb-3">
-                                Whole wheat bread with butter
+                                Whole wheat bread cooked in tandoor
                             </p>
                             <div class="flex items-center mb-3">
                                 <span class="text-sm font-medium mr-2"
@@ -553,9 +1071,9 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹40</span>
+                                <span class="font-bold text-lg">$6</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -563,20 +1081,77 @@
                         </div>
                     </div>
 
-                    <!-- Laccha Paratha -->
+                    <!-- Missi Roti -->
                     <div
                         class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
-                        onclick="openPopup('laccha_paratha')"
+                        onclick="openPopup('missi_roti')"
                     >
                         <img
                             src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="Laccha Paratha"
+                            alt="Missi Roti"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Laccha Paratha
+                                    Missi Roti (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Spiced gram flour flatbread
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 30%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$6</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aloo Paratha -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('aloo_paratha')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Aloo Paratha"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Aloo Paratha
                                 </h3>
                                 <span class="veg-icon">
                                     <svg
@@ -596,7 +1171,7 @@
                                 </span>
                             </div>
                             <p class="text-gray-600 mb-3">
-                                Flaky layered bread with ghee
+                                Stuffed potato flatbread with butter
                             </p>
                             <div class="flex items-center mb-3">
                                 <span class="text-sm font-medium mr-2"
@@ -605,14 +1180,128 @@
                                 <div class="spice-level">
                                     <div
                                         class="spice-level-fill"
-                                        style="width: 10%"
+                                        style="width: 40%"
                                     ></div>
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹70</span>
+                                <span class="font-bold text-lg">$6</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Methi Thepla -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('methi_thepla')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Methi Thepla"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Methi Thepla (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Gujarati fenugreek flatbread
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 30%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$6</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bajra Roti -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('bajra_roti')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Bajra Roti"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Bajra Roti (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Millet flour flatbread
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$6</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -625,7 +1314,7 @@
             <!-- Desserts Section -->
             <section>
                 <h2
-                    class="text-3xl font-bold mb-8 text-rose-600 border-b-2 border-rose-600 pb-2"
+                    class="text-3xl font-bold mb-8 border-b-2 border-rose-600 pb-2"
                 >
                     Desserts
                 </h2>
@@ -679,9 +1368,9 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹90</span>
+                                <span class="font-bold text-lg">$11</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -736,9 +1425,66 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹110</span>
+                                <span class="font-bold text-lg">$10</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vegan Gajar Halwa -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('vegan_gajar_halwa')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Vegan Gajar Halwa"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Vegan Gajar Halwa
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Carrot pudding made with coconut milk
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$12</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -793,9 +1539,123 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-bold text-lg">₹120</span>
+                                <span class="font-bold text-lg">$8</span>
                                 <button
-                                    class="bg-rose-500 text-white px-3 py-1 rounded hover:bg-rose-600"
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vegan Jalebi -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('vegan_jalebi')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Vegan Jalebi"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Vegan Jalebi
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Crispy spirals soaked in sugar syrup
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$10</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coconut Ladoo -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                        onclick="openPopup('coconut_ladoo')"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Coconut Ladoo"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-semibold mb-2">
+                                    Coconut Ladoo (Vegan)
+                                </h3>
+                                <span class="vegan-icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-3">
+                                Sweet coconut balls with cardamom
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-medium mr-2"
+                                    >Spice:</span
+                                >
+                                <div class="spice-level">
+                                    <div
+                                        class="spice-level-fill"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-lg">$9</span>
+                                <button
+                                    class="bg-lime-300 text-black px-3 py-1 rounded hover:bg-lime-400"
                                 >
                                     View Details
                                 </button>
@@ -846,10 +1706,7 @@
                         <h2 id="popup-title" class="text-2xl font-bold"></h2>
                         <span id="popup-veg-nonveg"></span>
                     </div>
-                    <p
-                        id="popup-price"
-                        class="text-xl text-rose-600 font-semibold mb-4"
-                    ></p>
+                    <p id="popup-price" class="text-xl font-semibold mb-4"></p>
                     <p id="popup-description" class="text-gray-700 mb-4"></p>
 
                     <div class="flex items-center mb-4">
@@ -912,179 +1769,479 @@
         <script>
             let currentItemId = null;
 
-            // Indian menu items data with numeric prices
+            // Vegetarian/Vegan menu items data with numeric prices
             const menuItems = {
                 // Starters
                 samosa: {
-                    title: "Samosa",
-                    displayPrice: "₹80 (2 pieces)",
-                    price: 80,
+                    title: "Samosa (Vegan)",
+                    displayPrice: "$3(2 pieces)",
+                    price: 3,
                     description:
-                        "Crispy, golden-brown pastry filled with a savory mixture of spiced potatoes, peas, and aromatic herbs.",
+                        "Crispy, golden-brown pastry filled with a savory mixture of spiced potatoes, peas, and aromatic herbs. Vegan-friendly with no dairy products.",
                     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                     spiceLevel: 60,
                     isVeg: true,
+                    isVegan: true,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
-                            <li>Refined flour</li>
+                            <li>Whole wheat flour</li>
                             <li>Potatoes</li>
                             <li>Green peas</li>
                             <li>Cumin seeds</li>
                             <li>Coriander powder</li>
                             <li>Garam masala</li>
                             <li>Green chilies</li>
+                            <li>Vegetable oil</li>
                         </ul>
                         <p class='mt-4 font-semibold'>Allergens:</p>
                             <p>Contains gluten</p>
                         <p class='mt-4 font-semibold'>Serving Suggestion:</p>
                             <p>Best served hot with mint chutney or tamarind sauce</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
-                chicken_tikka: {
-                    title: "Chicken Tikka",
-                    displayPrice: "₹220 (6 pieces)",
-                    price: 220,
+                paneer_tikka: {
+                    title: "Paneer Tikka",
+                    displayPrice: "$12 (6 pieces)",
+                    price: 12,
                     description:
-                        "Succulent pieces of chicken marinated in yogurt and spices, cooked in a tandoor for that authentic smoky flavor.",
-                    image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                    spiceLevel: 70,
-                    isVeg: false,
-                    details: `
-                        <p class='font-semibold'>Ingredients:</p>
-                        <ul class='list-disc pl-5 mt-2'>
-                            <li>Chicken breast</li>
-                            <li>Yogurt</li>
-                            <li>Ginger-garlic paste</li>
-                            <li>Lemon juice</li>
-                            <li>Kashmiri red chili powder</li>
-                            <li>Garam masala</li>
-                            <li>Mustard oil</li>
-                        </ul>
-                        <p class='mt-4 font-semibold'>Marination Time:</p>
-                            <p>Minimum 4 hours recommended</p>
-                        <p class='mt-4 font-semibold'>Cooking Method:</p>
-                            <p>Traditionally cooked in clay tandoor</p>
-                    `,
-                },
-                paneer_pakora: {
-                    title: "Paneer Pakora",
-                    displayPrice: "₹150 (8 pieces)",
-                    price: 150,
-                    description:
-                        "Soft paneer cubes coated in a spiced gram flour batter and deep-fried to crispy perfection.",
+                        "Succulent pieces of paneer marinated in yogurt and spices, cooked in a tandoor for that authentic smoky flavor.",
                     image: "https://images.unsplash.com/photo-1630911422741-92906a8d7a8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                    spiceLevel: 50,
+                    spiceLevel: 70,
                     isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
                             <li>Paneer (cottage cheese)</li>
-                            <li>Gram flour (besan)</li>
-                            <li>Rice flour</li>
-                            <li>Carom seeds (ajwain)</li>
-                            <li>Turmeric powder</li>
-                            <li>Red chili powder</li>
+                            <li>Yogurt</li>
+                            <li>Bell peppers</li>
+                            <li>Onions</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Kashmiri red chili powder</li>
+                            <li>Garam masala</li>
+                            <li>Lemon juice</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Marination Time:</p>
+                            <p>Minimum 2 hours recommended</p>
+                        <p class='mt-4 font-semibold'>Cooking Method:</p>
+                            <p>Traditionally cooked in clay tandoor</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (yogurt and paneer)</p>
+                    `,
+                },
+                aloo_tikki: {
+                    title: "Aloo Tikki (Vegan)",
+                    displayPrice: "$12 (2 pieces)",
+                    price: 12,
+                    description:
+                        "Spiced potato patties pan-fried to golden perfection, served with mint and tamarind chutneys.",
+                    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 50,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Potatoes</li>
+                            <li>Peas</li>
                             <li>Coriander leaves</li>
+                            <li>Green chilies</li>
+                            <li>Cumin seeds</li>
+                            <li>Garam masala</li>
+                            <li>Vegetable oil</li>
                         </ul>
                         <p class='mt-4 font-semibold'>Serving Temperature:</p>
                             <p>Best served hot</p>
                         <p class='mt-4 font-semibold'>Accompaniment:</p>
-                            <p>Comes with mint-coriander chutney</p>
+                            <p>Comes with mint-coriander chutney and tamarind sauce</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
+                    `,
+                },
+                veg_pakora: {
+                    title: "Vegetable Pakora (Vegan)",
+                    displayPrice: "$8 (8 pieces)",
+                    price: 8,
+                    description:
+                        "Seasonal vegetables dipped in a spiced chickpea flour batter and deep-fried to crispy perfection.",
+                    image: "https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 40,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Chickpea flour</li>
+                            <li>Potatoes</li>
+                            <li>Onions</li>
+                            <li>Spinach</li>
+                            <li>Cauliflower</li>
+                            <li>Carom seeds (ajwain)</li>
+                            <li>Turmeric powder</li>
+                            <li>Red chili powder</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Seasonal Variations:</p>
+                            <p>Vegetables may vary based on availability</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Best enjoyed with mint chutney</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
+                    `,
+                },
+                dahi_puri: {
+                    title: "Dahi Puri",
+                    displayPrice: "$10 (6 pieces)",
+                    price: 10,
+                    description:
+                        "Crisp puri shells filled with potatoes, chickpeas, yogurt, and tangy tamarind chutney, topped with sev.",
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 30,
+                    isVeg: true,
+                    isVegan: false,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Puri shells</li>
+                            <li>Potatoes</li>
+                            <li>Chickpeas</li>
+                            <li>Yogurt</li>
+                            <li>Tamarind chutney</li>
+                            <li>Mint chutney</li>
+                            <li>Sev (chickpea noodles)</li>
+                            <li>Coriander leaves</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Texture:</p>
+                            <p>Crispy outside with soft, flavorful fillings</p>
+                        <p class='mt-4 font-semibold'>Serving Style:</p>
+                            <p>Assembled fresh when ordered</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (yogurt)</p>
+                    `,
+                },
+                chana_chaat: {
+                    title: "Chana Chaat (Vegan)",
+                    displayPrice: "$6",
+                    price: 6,
+                    description:
+                        "Spiced chickpea salad with onions, tomatoes, cucumber, and lemon, topped with crunchy sev and fresh coriander.",
+                    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 50,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Chickpeas</li>
+                            <li>Onions</li>
+                            <li>Tomatoes</li>
+                            <li>Cucumber</li>
+                            <li>Lemon juice</li>
+                            <li>Chaat masala</li>
+                            <li>Cumin powder</li>
+                            <li>Sev (chickpea noodles)</li>
+                            <li>Coriander leaves</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Health Benefits:</p>
+                            <p>High in protein and fiber</p>
+                        <p class='mt-4 font-semibold'>Serving Temperature:</p>
+                            <p>Best served chilled</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
 
                 // Main Courses
-                butter_chicken: {
-                    title: "Butter Chicken",
-                    displayPrice: "₹280",
-                    price: 280,
+                paneer_butter_masala: {
+                    title: "Paneer Butter Masala",
+                    displayPrice: "$16",
+                    price: 16,
                     description:
-                        "A rich and creamy tomato-based curry with tender pieces of tandoori chicken, butter, and cream.",
+                        "Soft paneer cubes in a rich, creamy tomato gravy with butter and aromatic spices.",
                     image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                     spiceLevel: 50,
-                    isVeg: false,
+                    isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
-                            <li>Chicken thigh pieces</li>
+                            <li>Paneer (cottage cheese)</li>
                             <li>Tomato puree</li>
                             <li>Fresh cream</li>
                             <li>Butter</li>
                             <li>Cashew paste</li>
                             <li>Honey</li>
                             <li>Kasuri methi (dried fenugreek leaves)</li>
+                            <li>Garam masala</li>
                         </ul>
                         <p class='mt-4 font-semibold'>Origin:</p>
-                            <p>Created in Delhi in the 1950s</p>
+                            <p>North Indian specialty</p>
                         <p class='mt-4 font-semibold'>Serving Suggestion:</p>
                             <p>Best enjoyed with naan or jeera rice</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (paneer, cream, butter)</p>
                     `,
                 },
-                palak_paneer: {
-                    title: "Palak Paneer",
-                    displayPrice: "₹240",
-                    price: 240,
+                chana_masala: {
+                    title: "Chana Masala (Vegan)",
+                    displayPrice: "$14",
+                    price: 14,
                     description:
-                        "Fresh spinach cooked with spices and blended into a smooth gravy with soft cubes of paneer.",
+                        "Chickpeas cooked in a flavorful onion-tomato gravy with aromatic spices, a North Indian classic.",
                     image: "https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                    spiceLevel: 40,
+                    spiceLevel: 70,
                     isVeg: true,
+                    isVegan: true,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
-                            <li>Fresh spinach</li>
-                            <li>Paneer cubes</li>
-                            <li>Onion-tomato gravy</li>
+                            <li>Chickpeas</li>
+                            <li>Onions</li>
+                            <li>Tomatoes</li>
                             <li>Ginger-garlic paste</li>
                             <li>Green chilies</li>
                             <li>Cumin seeds</li>
-                            <li>Fresh cream</li>
+                            <li>Coriander powder</li>
+                            <li>Garam masala</li>
+                            <li>Amchur (dry mango powder)</li>
                         </ul>
                         <p class='mt-4 font-semibold'>Health Benefits:</p>
-                            <p>Rich in iron and calcium</p>
+                            <p>High in protein and fiber</p>
                         <p class='mt-4 font-semibold'>Preparation Time:</p>
-                            <p>30 minutes</p>
+                            <p>Chickpeas soaked overnight and slow-cooked</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
-                lamb_rogan_josh: {
-                    title: "Lamb Rogan Josh",
-                    displayPrice: "₹320",
-                    price: 320,
+                dal_makhani: {
+                    title: "Dal Makhani",
+                    displayPrice: "$13",
+                    price: 13,
                     description:
-                        "Aromatic lamb curry from Kashmir with tender pieces of meat in a rich, flavorful gravy.",
+                        "Slow-cooked black lentils and kidney beans with butter and cream, simmered overnight for rich flavor.",
                     image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                    spiceLevel: 80,
-                    isVeg: false,
+                    spiceLevel: 40,
+                    isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
-                            <li>Lamb pieces</li>
-                            <li>Yogurt</li>
-                            <li>Onions</li>
-                            <li>Garlic-ginger paste</li>
-                            <li>Kashmiri red chili powder</li>
-                            <li>Fennel powder</li>
+                            <li>Whole black lentils (urad dal)</li>
+                            <li>Red kidney beans (rajma)</li>
+                            <li>Butter</li>
+                            <li>Fresh cream</li>
+                            <li>Tomato puree</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Kasuri methi (dried fenugreek leaves)</li>
                             <li>Garam masala</li>
-                            <li>Mustard oil</li>
                         </ul>
                         <p class='mt-4 font-semibold'>Cooking Time:</p>
-                            <p>Slow cooked for 2-3 hours</p>
+                            <p>Slow cooked for 8-10 hours</p>
                         <p class='mt-4 font-semibold'>Origin:</p>
-                            <p>Traditional Kashmiri dish</p>
+                            <p>Traditional Punjabi dish</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (butter and cream)</p>
+                    `,
+                },
+                baingan_bharta: {
+                    title: "Baingan Bharta (Vegan)",
+                    displayPrice: "$9",
+                    price: 9,
+                    description:
+                        "Smoky roasted eggplant mashed and cooked with onions, tomatoes, and aromatic spices.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 60,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Eggplant (brinjal)</li>
+                            <li>Onions</li>
+                            <li>Tomatoes</li>
+                            <li>Green peas</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Green chilies</li>
+                            <li>Cumin seeds</li>
+                            <li>Coriander powder</li>
+                            <li>Turmeric powder</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Cooking Method:</p>
+                            <p>Eggplant roasted over open flame for smoky flavor</p>
+                        <p class='mt-4 font-semibold'>Texture:</p>
+                            <p>Soft and creamy with chunks of vegetables</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
+                    `,
+                },
+                malai_kofta: {
+                    title: "Malai Kofta",
+                    displayPrice: "$18",
+                    price: 18,
+                    description:
+                        "Vegetable and paneer dumplings in a rich, creamy tomato-cashew gravy, a luxurious vegetarian dish.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 30,
+                    isVeg: true,
+                    isVegan: false,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Paneer (cottage cheese)</li>
+                            <li>Potatoes</li>
+                            <li>Cashews</li>
+                            <li>Raisins</li>
+                            <li>Fresh cream</li>
+                            <li>Tomato puree</li>
+                            <li>Onion paste</li>
+                            <li>Garam masala</li>
+                            <li>Cardamom powder</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Preparation:</p>
+                            <p>Koftas are deep-fried then simmered in gravy</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Best with naan or jeera rice</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (paneer and cream)</p>
+                    `,
+                },
+                veg_korma: {
+                    title: "Vegetable Korma",
+                    displayPrice: "$18",
+                    price: 18,
+                    description:
+                        "Mixed vegetables in a creamy cashew-coconut gravy flavored with aromatic spices, a mild and rich dish.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 30,
+                    isVeg: true,
+                    isVegan: false,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Mixed vegetables (carrots, beans, peas, cauliflower)</li>
+                            <li>Cashew paste</li>
+                            <li>Coconut milk</li>
+                            <li>Yogurt</li>
+                            <li>Onion paste</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Green cardamom</li>
+                            <li>Cloves</li>
+                            <li>Cinnamon</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Origin:</p>
+                            <p>Mughlai cuisine specialty</p>
+                        <p class='mt-4 font-semibold'>Texture:</p>
+                            <p>Creamy with tender-crisp vegetables</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (yogurt)</p>
+                    `,
+                },
+                rajma_masala: {
+                    title: "Rajma Masala (Vegan)",
+                    displayPrice: "$15",
+                    price: 15,
+                    description:
+                        "Red kidney beans cooked in a spicy onion-tomato gravy, a protein-rich North Indian staple.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 60,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Red kidney beans</li>
+                            <li>Onions</li>
+                            <li>Tomatoes</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Green chilies</li>
+                            <li>Cumin seeds</li>
+                            <li>Coriander powder</li>
+                            <li>Turmeric powder</li>
+                            <li>Garam masala</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Preparation:</p>
+                            <p>Beans soaked overnight and slow-cooked</p>
+                        <p class='mt-4 font-semibold'>Serving Suggestion:</p>
+                            <p>Traditionally served with steamed rice</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
+                    `,
+                },
+                sarson_ka_saag: {
+                    title: "Sarson Ka Saag (Vegan)",
+                    displayPrice: "$13",
+                    price: 13,
+                    description:
+                        "Mustard greens cooked with spinach and spices, a traditional Punjabi winter dish.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 40,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Mustard greens</li>
+                            <li>Spinach</li>
+                            <li>Bathua (chenopodium)</li>
+                            <li>Green chilies</li>
+                            <li>Ginger</li>
+                            <li>Garlic</li>
+                            <li>Cumin seeds</li>
+                            <li>Cornmeal (makki ka atta)</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Traditional Pairing:</p>
+                            <p>Best with makki ki roti (corn flatbread)</p>
+                        <p class='mt-4 font-semibold'>Seasonal Availability:</p>
+                            <p>Winter specialty when greens are fresh</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
+                    `,
+                },
+                mushroom_masala: {
+                    title: "Mushroom Masala",
+                    displayPrice: "$8",
+                    price: 8,
+                    description:
+                        "Button mushrooms cooked in a flavorful onion-tomato gravy with aromatic spices.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 50,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Button mushrooms</li>
+                            <li>Onions</li>
+                            <li>Tomatoes</li>
+                            <li>Ginger-garlic paste</li>
+                            <li>Green chilies</li>
+                            <li>Cumin seeds</li>
+                            <li>Coriander powder</li>
+                            <li>Turmeric powder</li>
+                            <li>Garam masala</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Texture:</p>
+                            <p>Meaty mushrooms in rich gravy</p>
+                        <p class='mt-4 font-semibold'>Health Benefits:</p>
+                            <p>Low in calories, high in nutrients</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
 
                 // Breads
                 garlic_naan: {
                     title: "Garlic Naan",
-                    displayPrice: "₹60 per piece",
-                    price: 60,
+                    displayPrice: "$6 per piece",
+                    price: 6,
                     description:
                         "Soft, leavened bread baked in tandoor with generous amounts of garlic and butter.",
                     image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                     spiceLevel: 20,
                     isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
@@ -1099,65 +2256,160 @@
                             <p>Traditionally baked in clay tandoor</p>
                         <p class='mt-4 font-semibold'>Serving Suggestion:</p>
                             <p>Best with any curry or dal</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (yogurt and butter)</p>
                     `,
                 },
-                butter_roti: {
-                    title: "Butter Roti",
-                    displayPrice: "₹40 per piece",
-                    price: 40,
+                tandoori_roti: {
+                    title: "Tandoori Roti (Vegan)",
+                    displayPrice: "$6 per piece",
+                    price: 6,
                     description:
-                        "Whole wheat flatbread cooked on tawa and finished with butter.",
+                        "Whole wheat bread cooked in tandoor, with a slight char and smoky flavor.",
                     image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                     spiceLevel: 0,
                     isVeg: true,
+                    isVegan: true,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
                             <li>Whole wheat flour</li>
                             <li>Water</li>
                             <li>Salt</li>
-                            <li>Butter</li>
                         </ul>
                         <p class='mt-4 font-semibold'>Health Benefits:</p>
                             <p>High in fiber, low in fat</p>
                         <p class='mt-4 font-semibold'>Preparation Time:</p>
                             <p>Freshly made in 5 minutes</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
-                laccha_paratha: {
-                    title: "Laccha Paratha",
-                    displayPrice: "₹70 per piece",
-                    price: 70,
+                missi_roti: {
+                    title: "Missi Roti (Vegan)",
+                    displayPrice: "$6 per piece",
+                    price: 6,
                     description:
-                        "Flaky, multi-layered bread made with whole wheat flour and ghee.",
+                        "Spiced gram flour flatbread cooked on tawa, a Rajasthani specialty with robust flavors.",
                     image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                    spiceLevel: 10,
+                    spiceLevel: 30,
                     isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Gram flour (besan)</li>
+                            <li>Whole wheat flour</li>
+                            <li>Onions</li>
+                            <li>Coriander leaves</li>
+                            <li>Green chilies</li>
+                            <li>Cumin seeds</li>
+                            <li>Turmeric powder</li>
+                            <li>Red chili powder</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Texture:</p>
+                            <p>Slightly crisp outside, soft inside</p>
+                        <p class='mt-4 font-semibold'>Nutrition:</p>
+                            <p>High in protein from gram flour</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
+                    `,
+                },
+                aloo_paratha: {
+                    title: "Aloo Paratha",
+                    displayPrice: "$6 per piece",
+                    price: 6,
+                    description:
+                        "Whole wheat flatbread stuffed with spiced mashed potatoes and pan-fried with butter.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 40,
+                    isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
                             <li>Whole wheat flour</li>
-                            <li>Ghee</li>
-                            <li>Salt</li>
-                            <li>Water</li>
+                            <li>Potatoes</li>
+                            <li>Green chilies</li>
+                            <li>Coriander leaves</li>
+                            <li>Cumin seeds</li>
+                            <li>Amchur (dry mango powder)</li>
+                            <li>Butter</li>
                         </ul>
-                        <p class='mt-4 font-semibold'>Preparation Technique:</p>
-                            <p>Layered by folding and rolling multiple times</p>
+                        <p class='mt-4 font-semibold'>Origin:</p>
+                            <p>Punjabi breakfast specialty</p>
                         <p class='mt-4 font-semibold'>Serving Suggestion:</p>
-                            <p>Excellent with curries or just with pickle</p>
+                            <p>Best with yogurt and pickle</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (butter)</p>
+                    `,
+                },
+                methi_thepla: {
+                    title: "Methi Thepla (Vegan)",
+                    displayPrice: "$6 per piece",
+                    price: 6,
+                    description:
+                        "Gujarati flatbread made with whole wheat flour, fresh fenugreek leaves, and spices.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 30,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Whole wheat flour</li>
+                            <li>Fresh fenugreek leaves</li>
+                            <li>Yogurt (optional)</li>
+                            <li>Turmeric powder</li>
+                            <li>Red chili powder</li>
+                            <li>Cumin-coriander powder</li>
+                            <li>Sesame seeds</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Shelf Life:</p>
+                            <p>Stays fresh for 2-3 days</p>
+                        <p class='mt-4 font-semibold'>Traditional Use:</p>
+                            <p>Travel food in Gujarat</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based (without yogurt)</p>
+                    `,
+                },
+                bajra_roti: {
+                    title: "Bajra Roti (Vegan)",
+                    displayPrice: "$6 per piece",
+                    price: 6,
+                    description:
+                        "Millet flour flatbread, gluten-free and nutritious, a Rajasthani and Gujarati staple.",
+                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Bajra (pearl millet) flour</li>
+                            <li>Water</li>
+                            <li>Salt</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Health Benefits:</p>
+                            <p>Gluten-free, high in fiber and iron</p>
+                        <p class='mt-4 font-semibold'>Traditional Pairing:</p>
+                            <p>Best with garlic chutney or gud (jaggery)</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
 
                 // Desserts
                 gulab_jamun: {
                     title: "Gulab Jamun",
-                    displayPrice: "₹90 (2 pieces)",
-                    price: 90,
+                    displayPrice: "$11 (2 pieces)",
+                    price: 11,
                     description:
-                        "Soft, spongy milk balls soaked in rose-flavored sugar syrup.",
+                        "Soft, spongy milk balls soaked in rose-flavored sugar syrup, a classic Indian sweet.",
                     image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                     spiceLevel: 0,
                     isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
@@ -1167,22 +2419,26 @@
                             <li>Sugar</li>
                             <li>Rose water</li>
                             <li>Cardamom powder</li>
+                            <li>Ghee (for frying)</li>
                         </ul>
                         <p class='mt-4 font-semibold'>Serving Temperature:</p>
                             <p>Best served warm</p>
                         <p class='mt-4 font-semibold'>Origin:</p>
                             <p>Popular across South Asia</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (khoya and ghee)</p>
                     `,
                 },
                 kheer: {
                     title: "Kheer",
-                    displayPrice: "₹110",
-                    price: 110,
+                    displayPrice: "$10",
+                    price: 10,
                     description:
                         "Creamy rice pudding made with milk, sugar, and flavored with cardamom and nuts.",
                     image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                     spiceLevel: 0,
                     isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
@@ -1198,17 +2454,49 @@
                             <p>Slow cooked for 1-2 hours</p>
                         <p class='mt-4 font-semibold'>Serving Suggestion:</p>
                             <p>Chilled or at room temperature</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (milk)</p>
+                    `,
+                },
+                vegan_gajar_halwa: {
+                    title: "Vegan Gajar Halwa",
+                    displayPrice: "$12",
+                    price: 12,
+                    description:
+                        "Carrot pudding made with coconut milk and jaggery, a dairy-free version of the classic dessert.",
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Carrots</li>
+                            <li>Coconut milk</li>
+                            <li>Jaggery</li>
+                            <li>Cardamom powder</li>
+                            <li>Cashews</li>
+                            <li>Raisins</li>
+                            <li>Coconut oil</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Preparation:</p>
+                            <p>Carrots slow-cooked to develop flavor</p>
+                        <p class='mt-4 font-semibold'>Health Benefits:</p>
+                            <p>Rich in beta-carotene, dairy-free</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
                 rasmalai: {
                     title: "Rasmalai",
-                    displayPrice: "₹120 (2 pieces)",
-                    price: 120,
+                    displayPrice: "$12 (2 pieces)",
+                    price: 12,
                     description:
-                        "Soft cottage cheese patties soaked in sweetened, flavored milk.",
+                        "Soft cottage cheese patties soaked in sweetened, flavored milk, garnished with pistachios.",
                     image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                     spiceLevel: 0,
                     isVeg: true,
+                    isVegan: false,
                     details: `
                         <p class='font-semibold'>Ingredients:</p>
                         <ul class='list-disc pl-5 mt-2'>
@@ -1223,6 +2511,64 @@
                             <p>Requires 3-4 hours of soaking</p>
                         <p class='mt-4 font-semibold'>Origin:</p>
                             <p>Bengali sweet from Eastern India</p>
+                        <p class='mt-4 font-semibold'>Vegetarian Status:</p>
+                            <p>Contains dairy (paneer and milk)</p>
+                    `,
+                },
+                vegan_jalebi: {
+                    title: "Vegan Jalebi",
+                    displayPrice: "$10 (4 pieces)",
+                    price: 10,
+                    description:
+                        "Crispy spirals made from fermented batter, soaked in sugar syrup, made without dairy or eggs.",
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Maida (refined flour)</li>
+                            <li>Besan (gram flour)</li>
+                            <li>Water</li>
+                            <li>Sugar</li>
+                            <li>Saffron</li>
+                            <li>Cardamom powder</li>
+                            <li>Lemon juice</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Preparation:</p>
+                            <p>Batter fermented overnight for best results</p>
+                        <p class='mt-4 font-semibold'>Texture:</p>
+                            <p>Crispy outside, juicy inside</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
+                    `,
+                },
+                coconut_ladoo: {
+                    title: "Coconut Ladoo (Vegan)",
+                    displayPrice: "$9 (2 pieces)",
+                    price: 9,
+                    description:
+                        "Sweet coconut balls flavored with cardamom, made with coconut milk and jaggery.",
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    spiceLevel: 0,
+                    isVeg: true,
+                    isVegan: true,
+                    details: `
+                        <p class='font-semibold'>Ingredients:</p>
+                        <ul class='list-disc pl-5 mt-2'>
+                            <li>Fresh coconut</li>
+                            <li>Coconut milk</li>
+                            <li>Jaggery</li>
+                            <li>Cardamom powder</li>
+                            <li>Cashews</li>
+                        </ul>
+                        <p class='mt-4 font-semibold'>Preparation Time:</p>
+                            <p>Ready in 20 minutes</p>
+                        <p class='mt-4 font-semibold'>Health Benefits:</p>
+                            <p>No refined sugar, dairy-free</p>
+                        <p class='mt-4 font-semibold'>Vegan Status:</p>
+                            <p>100% plant-based, no animal products</p>
                     `,
                 },
             };
@@ -1242,22 +2588,22 @@
                     item.details;
                 document.getElementById("quantity").value = 1;
 
-                // Set veg/non-veg icon
+                // Set veg/vegan icon
                 const vegNonVegElement =
                     document.getElementById("popup-veg-nonveg");
-                if (item.isVeg) {
+                if (item.isVegan) {
                     vegNonVegElement.innerHTML = `
-                        <span class="veg-icon">
+                        <span class="vegan-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                         </span>
                     `;
-                } else {
+                } else if (item.isVeg) {
                     vegNonVegElement.innerHTML = `
-                        <span class="non-veg-icon">
+                        <span class="veg-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                         </span>
                     `;
