@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;400;600;700;800;900;1000&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,30 +17,60 @@
     <meta name="author" content="Masala Magic">
 
     <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <a href="index.html" class="mainlogo"><img src="imgs/Masala Magic.png" alt="Logo"> Masala Magic</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html#our_mission" class="nav-a nav-otherL">Our Mission</a></li>
-                    <li><a href="index.html#our_process" class="nav-a">Our Process</a></li>
-                    <li><a href="index.html#Menu" class="nav-a">Our Menu</a></li>
-                    <li><a href="reservation.html" class="nav-a">Reservation</a></li>
-                    <li><a href="checkout.html" class="nav-a"><img src="imgs/ShoppingCart.png" alt=""></a></li>
-                    <li><a href="References.html" class="nav-a">References</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav class="flex flex-row justify-between items-center p-4 top-2 fixed w-[98.8%] m-2 rounded-2xl z-50 shadow-xl">
+        <a href="/" class="AK-logo w-16"><img src="/src/imgs/Masala Magic.png" alt=""></a>
+        <ul class="flex flex-row gap-5 items-center">
+            <li><a href="/index.html/#our_mission">Our Mission</a></li>
+            <li><a href="/src/approach.html">Our Approach</a></li>
+            <li><a href="/src/about.html">About Us</a></li>
+            <li><a href="/src/menu.html">Menu</a></li>
+            <li><a href="/src/References.html">Documentation Portfolio</a></li>
+            <div
+                class=" bg-lime-300 p-3 rounded-lg shadow-lg z-50 text-sm"
+            >
+                <a href="/src/checkout.html" class="flex items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                        />
+                    </svg>
+                    <span id="cart-count" class="font-semibold">0</span>
+                </a>
+            </div>
+        </ul>
+
+        <script>
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const totalItems = cart.reduce(
+                (sum, item) => sum + item.quantity,
+                0,
+            );
+            document.getElementById("cart-count").textContent = totalItems;
+        }
+
+        // Initialize cart count on page load
+        updateCartCount();
+        </script>
+    </nav>
     <!-- Start Main Section -->
-    <main>   
+    <main class="flex flex-col justify-center items-center pt-36">
                 <!-- Payment Options -->
                 <div class="payment-options">
                     <label>Payment Option:</label>
                     <button class="pay-btn" onclick="handlePaymentMethod('payNow')">Pay Now</button>
                     <button class="pay-btn" onclick="handlePaymentMethod('payAtStore')">Pay at Store</button>
                 </div>
-                
+
                 <script>
                     function handlePaymentMethod(paymentMethod) {
                         // Check the payment method chosen by the user
@@ -55,18 +86,18 @@
                         }
                     }
                 </script>
-                
+
 
         <style>
           .payment-options {
             display: flex;
             align-items: center;
         }
-        
+
         .payment-options label {
             margin-right: 10px;
         }
-        
+
         .pay-btn {
             background-color: #007bff;
             color: white;
@@ -76,11 +107,11 @@
             cursor: pointer;
             margin-left: 10px;
         }
-        
+
         .pay-btn:hover {
             background-color: #0056b3;
         }
-        
+
         </style>
 
     </body>
