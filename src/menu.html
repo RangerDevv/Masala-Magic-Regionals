@@ -38,28 +38,56 @@
         </style>
     </head>
     <body>
-        <!-- Cart Indicator -->
-        <div
-            class="fixed top-4 right-4 bg-lime-300 p-3 rounded-lg shadow-lg z-50"
+        <nav
+            class="flex flex-row justify-between items-center p-4 top-2 fixed w-[98.8%] m-2 rounded-2xl z-50 shadow-xl"
         >
-            <a href="checkout.html" class="flex items-center">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                </svg>
-                <span id="cart-count" class="font-semibold">0</span>
-            </a>
-        </div>
+            <a href="/" class="AK-logo w-16"
+                ><img src="/src/imgs/Masala Magic.png" alt=""
+            /></a>
+            <ul class="flex flex-row gap-5 items-center">
+                <li><a href="/index.html/#our_mission">Our Mission</a></li>
+                <li><a href="/src/approach.html">Our Approach</a></li>
+                <li><a href="/src/about.html">About Us</a></li>
+                <li><a href="/src/menu.html">Menu</a></li>
+                <li>
+                    <a href="/src/References.html">Documentation Portfolio</a>
+                </li>
+                <div class="bg-lime-300 p-3 rounded-lg shadow-lg z-50 text-sm">
+                    <a href="/src/checkout.html" class="flex items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 mr-2"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                            />
+                        </svg>
+                        <span id="cart-count" class="font-semibold">0</span>
+                    </a>
+                </div>
+            </ul>
+
+            <script>
+                function updateCartCount() {
+                    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    const totalItems = cart.reduce(
+                        (sum, item) => sum + item.quantity,
+                        0,
+                    );
+                    document.getElementById("cart-count").textContent =
+                        totalItems;
+                }
+
+                // Initialize cart count on page load
+                updateCartCount();
+            </script>
+        </nav>
 
         <!-- Header -->
         <header
@@ -147,7 +175,7 @@
                         onclick="openPopup('paneer_tikka')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1630911422741-92906a8d7a8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.indianveggiedelight.com/wp-content/uploads/2021/08/air-fryer-paneer-tikka-featured.jpg"
                             alt="Paneer Tikka"
                             class="w-full h-48 object-cover"
                         />
@@ -205,7 +233,7 @@
                         onclick="openPopup('aloo_tikki')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.indianveggiedelight.com/wp-content/uploads/2023/07/aloo-tikki-featured-500x375.jpg"
                             alt="Aloo Tikki"
                             class="w-full h-48 object-cover"
                         />
@@ -262,7 +290,7 @@
                         onclick="openPopup('veg_pakora')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.vegrecipesofindia.com/wp-content/uploads/2016/09/vegetable-pakora-recipe-1.jpg"
                             alt="Vegetable Pakora"
                             class="w-full h-48 object-cover"
                         />
@@ -320,7 +348,7 @@
                         onclick="openPopup('dahi_puri')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://ministryofcurry.com/wp-content/uploads/2022/07/Dahi-Puri_-3.jpg"
                             alt="Dahi Puri"
                             class="w-full h-48 object-cover"
                         />
@@ -378,7 +406,7 @@
                         onclick="openPopup('chana_chaat')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.madhuseverydayindian.com/wp-content/uploads/2021/05/chana-chaat-with-yogurt.jpg"
                             alt="Chana Chaat"
                             class="w-full h-48 object-cover"
                         />
@@ -448,7 +476,7 @@
                         onclick="openPopup('paneer_butter_masala')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://myfoodstory.com/wp-content/uploads/2021/07/restaurant-style-paneer-butter-masala-2-500x500.jpg"
                             alt="Paneer Butter Masala"
                             class="w-full h-48 object-cover"
                         />
@@ -505,7 +533,7 @@
                         onclick="openPopup('chana_masala')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://minimalistbaker.com/wp-content/uploads/2016/02/EASY-Chana-Masala-SQUARE.jpg"
                             alt="Chana Masala"
                             class="w-full h-48 object-cover"
                         />
@@ -562,7 +590,7 @@
                         onclick="openPopup('dal_makhani')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/dal-makhani-recipe.jpg"
                             alt="Dal Makhani"
                             class="w-full h-48 object-cover"
                         />
@@ -619,7 +647,7 @@
                         onclick="openPopup('baingan_bharta')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://tasteofeverestnorwalk.com/wp-content/uploads/2024/03/baingan-bharta-web.jpg"
                             alt="Baingan Bharta"
                             class="w-full h-48 object-cover"
                         />
@@ -676,7 +704,7 @@
                         onclick="openPopup('malai_kofta')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://myspicetrunk.com/wp-content/uploads/2021/01/20201219_1907582.jpg?v=1613929589"
                             alt="Malai Kofta"
                             class="w-full h-48 object-cover"
                         />
@@ -733,7 +761,7 @@
                         onclick="openPopup('veg_korma')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://thebigmansworld.com/wp-content/uploads/2022/11/vegetable-korma-recipe.jpg"
                             alt="Vegetable Korma"
                             class="w-full h-48 object-cover"
                         />
@@ -790,7 +818,7 @@
                         onclick="openPopup('rajma_masala')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://shwetainthekitchen.com/wp-content/uploads/2020/12/Rajma-Masala.jpg"
                             alt="Rajma Masala"
                             class="w-full h-48 object-cover"
                         />
@@ -847,7 +875,7 @@
                         onclick="openPopup('sarson_ka_saag')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.subbuskitchen.com/wp-content/uploads/2020/02/Saag-Paneer_finalforweb2-scaled.jpg"
                             alt="Sarson Ka Saag"
                             class="w-full h-48 object-cover"
                         />
@@ -904,7 +932,7 @@
                         onclick="openPopup('mushroom_masala')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.cookingcarnival.com/wp-content/uploads/2018/09/Mushroom-masala-4.jpg"
                             alt="Mushroom Masala"
                             class="w-full h-48 object-cover"
                         />
@@ -973,7 +1001,7 @@
                         onclick="openPopup('garlic_naan')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://hostthetoast.com/wp-content/uploads/2018/08/naan-202-320x320-1.jpg"
                             alt="Garlic Naan"
                             class="w-full h-48 object-cover"
                         />
@@ -1030,7 +1058,7 @@
                         onclick="openPopup('tandoori_roti')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://greatcurryrecipes.net/wp-content/uploads/2013/06/tandoorinaans2-720x720.jpg"
                             alt="Tandoori Roti"
                             class="w-full h-48 object-cover"
                         />
@@ -1087,7 +1115,7 @@
                         onclick="openPopup('missi_roti')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.whiskaffair.com/wp-content/uploads/2018/12/Missi-Roti-2-3.jpg"
                             alt="Missi Roti"
                             class="w-full h-48 object-cover"
                         />
@@ -1144,7 +1172,7 @@
                         onclick="openPopup('aloo_paratha')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.veganricha.com/wp-content/uploads/2023/03/Aloo-Paratha-7121.jpg"
                             alt="Aloo Paratha"
                             class="w-full h-48 object-cover"
                         />
@@ -1201,7 +1229,7 @@
                         onclick="openPopup('methi_thepla')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://somethingiscooking.com/wp-content/uploads/2017/01/MethiThepla5.jpg"
                             alt="Methi Thepla"
                             class="w-full h-48 object-cover"
                         />
@@ -1258,7 +1286,7 @@
                         onclick="openPopup('bajra_roti')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.vegrecipesofindia.com/wp-content/uploads/2013/03/bajra-bhakri-recipe-2.jpg"
                             alt="Bajra Roti"
                             class="w-full h-48 object-cover"
                         />
@@ -1327,7 +1355,7 @@
                         onclick="openPopup('gulab_jamun')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/11/gulab-jamun.webp"
                             alt="Gulab Jamun"
                             class="w-full h-48 object-cover"
                         />
@@ -1384,7 +1412,7 @@
                         onclick="openPopup('kheer')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.indianveggiedelight.com/wp-content/uploads/2017/08/rice-kheer-instant-pot-featured-image.jpg"
                             alt="Kheer"
                             class="w-full h-48 object-cover"
                         />
@@ -1441,14 +1469,14 @@
                         onclick="openPopup('vegan_gajar_halwa')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://pipingpotcurry.com/wp-content/uploads/2022/02/Gajar-ka-Halwa-Piping-Pot-Curry.jpg"
                             alt="Vegan Gajar Halwa"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Vegan Gajar Halwa
+                                    Gajar Halwa
                                 </h3>
                                 <span class="vegan-icon">
                                     <svg
@@ -1498,7 +1526,7 @@
                         onclick="openPopup('rasmalai')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://eatsbyramya.com/wp-content/uploads/2024/10/rasmalai_can_recipe.jpg"
                             alt="Rasmalai"
                             class="w-full h-48 object-cover"
                         />
@@ -1555,14 +1583,14 @@
                         onclick="openPopup('vegan_jalebi')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://www.cookwithnabeela.com/wp-content/uploads/2024/02/1Jalebi.webp"
                             alt="Vegan Jalebi"
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-xl font-semibold mb-2">
-                                    Vegan Jalebi
+                                    Jalebi
                                 </h3>
                                 <span class="vegan-icon">
                                     <svg
@@ -1612,7 +1640,7 @@
                         onclick="openPopup('coconut_ladoo')"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            src="https://aromaticessence.co/wp-content/uploads/2021/07/coconut_laddoo_featured.jpg"
                             alt="Coconut Ladoo"
                             class="w-full h-48 object-cover"
                         />
@@ -1808,7 +1836,7 @@
                     price: 12,
                     description:
                         "Succulent pieces of paneer marinated in yogurt and spices, cooked in a tandoor for that authentic smoky flavor.",
-                    image: "https://images.unsplash.com/photo-1630911422741-92906a8d7a8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.indianveggiedelight.com/wp-content/uploads/2021/08/air-fryer-paneer-tikka-featured.jpg",
                     spiceLevel: 70,
                     isVeg: true,
                     isVegan: false,
@@ -1838,7 +1866,7 @@
                     price: 12,
                     description:
                         "Spiced potato patties pan-fried to golden perfection, served with mint and tamarind chutneys.",
-                    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.indianveggiedelight.com/wp-content/uploads/2023/07/aloo-tikki-featured-500x375.jpg",
                     spiceLevel: 50,
                     isVeg: true,
                     isVegan: true,
@@ -1867,7 +1895,7 @@
                     price: 8,
                     description:
                         "Seasonal vegetables dipped in a spiced chickpea flour batter and deep-fried to crispy perfection.",
-                    image: "https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.vegrecipesofindia.com/wp-content/uploads/2016/09/vegetable-pakora-recipe-1.jpg",
                     spiceLevel: 40,
                     isVeg: true,
                     isVegan: true,
@@ -1897,7 +1925,7 @@
                     price: 10,
                     description:
                         "Crisp puri shells filled with potatoes, chickpeas, yogurt, and tangy tamarind chutney, topped with sev.",
-                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://ministryofcurry.com/wp-content/uploads/2022/07/Dahi-Puri_-3.jpg",
                     spiceLevel: 30,
                     isVeg: true,
                     isVegan: false,
@@ -1927,7 +1955,7 @@
                     price: 6,
                     description:
                         "Spiced chickpea salad with onions, tomatoes, cucumber, and lemon, topped with crunchy sev and fresh coriander.",
-                    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.madhuseverydayindian.com/wp-content/uploads/2021/05/chana-chaat-with-yogurt.jpg",
                     spiceLevel: 50,
                     isVeg: true,
                     isVegan: true,
@@ -1960,7 +1988,7 @@
                     price: 16,
                     description:
                         "Soft paneer cubes in a rich, creamy tomato gravy with butter and aromatic spices.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://myfoodstory.com/wp-content/uploads/2021/07/restaurant-style-paneer-butter-masala-2-500x500.jpg",
                     spiceLevel: 50,
                     isVeg: true,
                     isVegan: false,
@@ -1990,7 +2018,7 @@
                     price: 14,
                     description:
                         "Chickpeas cooked in a flavorful onion-tomato gravy with aromatic spices, a North Indian classic.",
-                    image: "https://images.unsplash.com/photo-1633945274411-2f2f5144a88b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://minimalistbaker.com/wp-content/uploads/2016/02/EASY-Chana-Masala-SQUARE.jpg",
                     spiceLevel: 70,
                     isVeg: true,
                     isVegan: true,
@@ -2021,7 +2049,7 @@
                     price: 13,
                     description:
                         "Slow-cooked black lentils and kidney beans with butter and cream, simmered overnight for rich flavor.",
-                    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/dal-makhani-recipe.jpg",
                     spiceLevel: 40,
                     isVeg: true,
                     isVegan: false,
@@ -2051,7 +2079,7 @@
                     price: 9,
                     description:
                         "Smoky roasted eggplant mashed and cooked with onions, tomatoes, and aromatic spices.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://tasteofeverestnorwalk.com/wp-content/uploads/2024/03/baingan-bharta-web.jpg",
                     spiceLevel: 60,
                     isVeg: true,
                     isVegan: true,
@@ -2082,7 +2110,7 @@
                     price: 18,
                     description:
                         "Vegetable and paneer dumplings in a rich, creamy tomato-cashew gravy, a luxurious vegetarian dish.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://myspicetrunk.com/wp-content/uploads/2021/01/20201219_1907582.jpg?v=1613929589",
                     spiceLevel: 30,
                     isVeg: true,
                     isVegan: false,
@@ -2113,7 +2141,7 @@
                     price: 18,
                     description:
                         "Mixed vegetables in a creamy cashew-coconut gravy flavored with aromatic spices, a mild and rich dish.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://thebigmansworld.com/wp-content/uploads/2022/11/vegetable-korma-recipe.jpg",
                     spiceLevel: 30,
                     isVeg: true,
                     isVegan: false,
@@ -2144,7 +2172,7 @@
                     price: 15,
                     description:
                         "Red kidney beans cooked in a spicy onion-tomato gravy, a protein-rich North Indian staple.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://shwetainthekitchen.com/wp-content/uploads/2020/12/Rajma-Masala.jpg",
                     spiceLevel: 60,
                     isVeg: true,
                     isVegan: true,
@@ -2175,7 +2203,7 @@
                     price: 13,
                     description:
                         "Mustard greens cooked with spinach and spices, a traditional Punjabi winter dish.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.subbuskitchen.com/wp-content/uploads/2020/02/Saag-Paneer_finalforweb2-scaled.jpg",
                     spiceLevel: 40,
                     isVeg: true,
                     isVegan: true,
@@ -2205,7 +2233,7 @@
                     price: 8,
                     description:
                         "Button mushrooms cooked in a flavorful onion-tomato gravy with aromatic spices.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.cookingcarnival.com/wp-content/uploads/2018/09/Mushroom-masala-4.jpg",
                     spiceLevel: 50,
                     isVeg: true,
                     isVegan: true,
@@ -2238,7 +2266,7 @@
                     price: 6,
                     description:
                         "Soft, leavened bread baked in tandoor with generous amounts of garlic and butter.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://hostthetoast.com/wp-content/uploads/2018/08/naan-202-320x320-1.jpg",
                     spiceLevel: 20,
                     isVeg: true,
                     isVegan: false,
@@ -2266,7 +2294,7 @@
                     price: 6,
                     description:
                         "Whole wheat bread cooked in tandoor, with a slight char and smoky flavor.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://greatcurryrecipes.net/wp-content/uploads/2013/06/tandoorinaans2-720x720.jpg",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: true,
@@ -2291,7 +2319,7 @@
                     price: 6,
                     description:
                         "Spiced gram flour flatbread cooked on tawa, a Rajasthani specialty with robust flavors.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.whiskaffair.com/wp-content/uploads/2018/12/Missi-Roti-2-3.jpg",
                     spiceLevel: 30,
                     isVeg: true,
                     isVegan: true,
@@ -2321,7 +2349,7 @@
                     price: 6,
                     description:
                         "Whole wheat flatbread stuffed with spiced mashed potatoes and pan-fried with butter.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.veganricha.com/wp-content/uploads/2023/03/Aloo-Paratha-7121.jpg",
                     spiceLevel: 40,
                     isVeg: true,
                     isVegan: false,
@@ -2350,7 +2378,7 @@
                     price: 6,
                     description:
                         "Gujarati flatbread made with whole wheat flour, fresh fenugreek leaves, and spices.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://somethingiscooking.com/wp-content/uploads/2017/01/MethiThepla5.jpg",
                     spiceLevel: 30,
                     isVeg: true,
                     isVegan: true,
@@ -2379,7 +2407,7 @@
                     price: 6,
                     description:
                         "Millet flour flatbread, gluten-free and nutritious, a Rajasthani and Gujarati staple.",
-                    image: "https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.vegrecipesofindia.com/wp-content/uploads/2013/03/bajra-bhakri-recipe-2.jpg",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: true,
@@ -2406,7 +2434,7 @@
                     price: 11,
                     description:
                         "Soft, spongy milk balls soaked in rose-flavored sugar syrup, a classic Indian sweet.",
-                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/11/gulab-jamun.webp",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: false,
@@ -2435,7 +2463,7 @@
                     price: 10,
                     description:
                         "Creamy rice pudding made with milk, sugar, and flavored with cardamom and nuts.",
-                    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.indianveggiedelight.com/wp-content/uploads/2017/08/rice-kheer-instant-pot-featured-image.jpg",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: false,
@@ -2459,12 +2487,12 @@
                     `,
                 },
                 vegan_gajar_halwa: {
-                    title: "Vegan Gajar Halwa",
+                    title: "Gajar Halwa",
                     displayPrice: "$12",
                     price: 12,
                     description:
                         "Carrot pudding made with coconut milk and jaggery, a dairy-free version of the classic dessert.",
-                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://pipingpotcurry.com/wp-content/uploads/2022/02/Gajar-ka-Halwa-Piping-Pot-Curry.jpg",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: true,
@@ -2493,7 +2521,7 @@
                     price: 12,
                     description:
                         "Soft cottage cheese patties soaked in sweetened, flavored milk, garnished with pistachios.",
-                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://eatsbyramya.com/wp-content/uploads/2024/10/rasmalai_can_recipe.jpg",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: false,
@@ -2516,12 +2544,12 @@
                     `,
                 },
                 vegan_jalebi: {
-                    title: "Vegan Jalebi",
+                    title: "Jalebi",
                     displayPrice: "$10 (4 pieces)",
                     price: 10,
                     description:
                         "Crispy spirals made from fermented batter, soaked in sugar syrup, made without dairy or eggs.",
-                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://www.cookwithnabeela.com/wp-content/uploads/2024/02/1Jalebi.webp",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: true,
@@ -2550,7 +2578,7 @@
                     price: 9,
                     description:
                         "Sweet coconut balls flavored with cardamom, made with coconut milk and jaggery.",
-                    image: "https://images.unsplash.com/photo-1586201375761-83865001e8d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                    image: "https://aromaticessence.co/wp-content/uploads/2021/07/coconut_laddoo_featured.jpg",
                     spiceLevel: 0,
                     isVeg: true,
                     isVegan: true,
