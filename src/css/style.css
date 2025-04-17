@@ -161,16 +161,52 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
+@media (max-width: 768px) {
+    .menu-container {
+        position: relative;
+    }
+
+    nav ul {
+        display: none; /* Hide menu on small screens */
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: auto;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    /* Mobile Menu Button */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
     nav ul {
         display: none; /* Hide menu on small screens */
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
+        background: #fff;
         position: absolute;
         top: 80px;
         right: 0;
-        width: 200px;
+        width: auto;
         padding: 15px;
         border-radius: 5px;
     }

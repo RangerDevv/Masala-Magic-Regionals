@@ -19,49 +19,44 @@
 
     <nav class="flex flex-row justify-between items-center p-4 top-2 fixed w-[98.8%] m-2 rounded-2xl z-50 shadow-xl">
         <a href="#" class="AK-logo w-16"><img src="src/imgs/Masala Magic.png" alt=""></a>
-        <ul class="flex flex-row gap-5 items-center">
-            <li><a href="/index.html/#our_mission">Our Mission</a></li>
-            <li><a href="/src/approach.html">Our Approach</a></li>
-            <li><a href="/src/about.html">About Us</a></li>
-            <li><a href="/src/menu.html">Menu</a></li>
-            <li><a href="/src/References.html">Documentation Portfolio</a></li>
-            <div
-                class=" bg-lime-300 p-3 rounded-lg shadow-lg z-50 text-sm"
-            >
-                <a href="/src/checkout.html" class="flex items-center">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                    </svg>
-                    <span id="cart-count" class="font-semibold">0</span>
-                </a>
-            </div>
-        </ul>
-
-        <script>
-        function updateCartCount() {
-            const cart = JSON.parse(localStorage.getItem("cart")) || [];
-            const totalItems = cart.reduce(
-                (sum, item) => sum + item.quantity,
-                0,
-            );
-            document.getElementById("cart-count").textContent = totalItems;
-        }
-
-        // Initialize cart count on page load
-        updateCartCount();
-        </script>
+        <div class="hidden sm:block" id="menu-container">
+            <ul class= "flex flex-row gap-5 items-center">
+                <li><a href="/index.html/#our_mission">Our Mission</a></li>
+                <li><a href="/src/approach.html">Our Approach</a></li>
+                <li><a href="/src/about.html">About Us</a></li>
+                <li><a href="/src/menu.html">Menu</a></li>
+                <li><a href="/src/References.html">Documentation Portfolio</a></li>
+                <div class="bg-lime-300 p-3 rounded-lg shadow-lg z-50 text-sm">
+                    <a href="/src/checkout.html" class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        <span id="cart-count" class="font-semibold">0</span>
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <button class="menu-toggle block sm:hidden" onclick="toggleMenu()">☰</button>
     </nav>
+
+    <script>
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItems = cart.reduce(
+            (sum, item) => sum + item.quantity,
+            0,
+        );
+        document.getElementById("cart-count").textContent = totalItems;
+    }
+
+    // Initialize cart count on page load
+    updateCartCount();
+
+    function toggleMenu() {
+        const menu = document.getElementById("menu-container")
+        menu.classList.toggle('hidden');
+    }
+    </script>
 
     <!-- Start header -->
     <header class="overflow-hidden">
@@ -134,9 +129,12 @@
     <!-- First Mission Box -->
     <div class="flex flex-row relative">
         <!-- Content Column -->
-        <div class="w-1/2">
+        <div class="px-4 w-full sm:w-1/2">
             <!-- Mission Section 1 -->
-            <div class="flex flex-row-reverse justify-center items-center gap-12 px-10 h-[100vh] pt-16" data-section="1">
+            <div class="flex flex-col justify-center items-center gap-12 px-10 sm:h-[100vh] pt-16" data-section="1">
+                <img src="https://t3.ftcdn.net/jpg/01/92/27/46/360_F_192274605_vQJlBC2MPS2RE8FhknkwYpUinTTqpWva.jpg"
+                     alt="Family meal"
+                     class="w-full h-ful  block sm:hidden">
                 <div class="flex flex-col gap-8 w-full h-auto">
                     <h2 class="text-5xl font-bold opacity-0 animate-fade-in [animation-fill-mode:forwards]">Bringing the Taste of Family and Culture Right to Your Table</h2>
                     <p class="text-3xl opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:100ms]">At Masala Magic, we believe the best memories are made around the table. Our dishes are crafted to spark joy, conversation, and togetherness—just like the vibrant family feasts we grew up with. From grandparents sharing stories to kids trying new flavors, every bite is an invitation to connect, laugh, and savor the magic of shared meals. </p>
@@ -145,7 +143,10 @@
             </div>
 
             <!-- Mission Section 2 -->
-            <div class="flex flex-row-reverse justify-center items-center gap-12 px-10 h-[100vh] pt-32" data-section="2">
+            <div class="flex flex-col justify-center items-center gap-12 px-10 h-[100vh] pt-32" data-section="2">
+                <img src="https://admin.wellandgood.com/wp-content/uploads/sites/3/2020/12/vegan-indian-dumplings-1.jpg"
+                     alt="Handcrafted food"
+                     class="w-full h-full block sm:hidden ">
                 <div class="flex flex-col gap-8 w-full h-auto">
                     <h2 class="text-5xl font-bold opacity-0 animate-fade-in [animation-fill-mode:forwards]">Handcrafted with Love</h2>
                     <p class="text-3xl opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:100ms]">No shortcuts, no artificial flavors—just the kind of food made with patience and passion. Our recipes are passed down through generations, slow-cooked to perfection, and served with the warmth of home. Because food isn’t just eaten; it’s felt.</p>
@@ -154,7 +155,10 @@
             </div>
 
             <!-- Mission Section 3 -->
-            <div class="flex flex-row-reverse justify-center items-center gap-12 px-10 h-[100vh] pt-32" data-section="3">
+            <div class="flex flex-col justify-center items-center gap-12 px-10 h-[100vh] pt-32" data-section="3">
+                <img src="https://img.freepik.com/premium-photo/traditional-indian-food-platter-served-banana-leaf-with-assorted-curries-rice-dumplings_1293074-210440.jpg"
+                     alt="Sustainable food"
+                     class="w-full h-full block sm:hidden ">
                 <div class="flex flex-col gap-8 w-full h-auto">
                     <h2 class="text-5xl font-bold opacity-0 animate-fade-in [animation-fill-mode:forwards]">Feed with Respect, Nurture the Earth</h2>
                     <p class="text-3xl opacity-0 animate-fade-in [animation-fill-mode:forwards] [animation-delay:100ms]">We believe in ahimsa (non-harm) beyond the plate—eco-friendly packaging, zero-waste kitchens, and mindful sourcing. When you dine with us, you’re not just enjoying a meal; you’re honoring the planet that provides it.</p>
@@ -165,7 +169,7 @@
 
 
         <!-- Sticky Images Column -->
-        <div class="w-1/2 h-screen sticky top-0 overflow-hidden pl-8 pr-16 pt-32">
+        <div class="w-1/2 h-screen sticky top-0 overflow-hidden pl-8 pr-16 pt-32 hidden sm:block">
             <div class="relative h-full w-full">
                 <!-- Image 1 (Top of stack) -->
                 <div class="absolute w-full h-[70%] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
