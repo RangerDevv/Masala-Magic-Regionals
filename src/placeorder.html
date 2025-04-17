@@ -61,7 +61,7 @@
     <!-- Start Main Section -->
     <main class="flex flex-col justify-center items-center pt-36">
                 <!-- Payment Options -->
-                <div class="payment-options">
+                <div class="payment-options pt-32">
                     <label>Payment Option:</label>
                     <button class="pay-btn" onclick="handlePaymentMethod('payNow')">Pay Now</button>
                     <button class="pay-btn" onclick="handlePaymentMethod('payAtStore')">Pay at Store</button>
@@ -72,7 +72,7 @@
                         // Check the payment method chosen by the user
                         if (paymentMethod === "payNow") {
                             // Redirect to a page where the user can enter their personal details
-                            window.location.href = "thankyoupage.html";
+                            window.location.href = "pickup.html";
                         } else if (paymentMethod === "payAtStore") {
                             // Redirect to the thank you page
                             window.location.href = "thankyoupage.html";

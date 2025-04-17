@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About Us - Masala Magic</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/output.css" />
+    </head>
+    <nav
+        class="flex flex-row justify-between items-center p-4 top-2 fixed w-[98.8%] m-2 rounded-2xl z-50 shadow-xl"
+    >
+        <a href="/" class="AK-logo w-16"
+            ><img src="/src/imgs/Masala Magic.png" alt=""
+        /></a>
+        <div class="hidden sm:block" id="menu-container">
+            <ul class="flex flex-row gap-5 items-center">
+                <li><a href="/index.html/#our_mission">Our Mission</a></li>
+                <li><a href="/src/approach.html">Our Approach</a></li>
+                <li><a href="/src/about.html">About Us</a></li>
+                <li><a href="/src/menu.html">Menu</a></li>
+                <li>
+                    <a href="/src/References.html">Documentation Portfolio</a>
+                </li>
+                <div class="bg-lime-300 p-3 rounded-lg shadow-lg z-50 text-sm">
+                    <a href="/src/checkout.html" class="flex items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 mr-2"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                            />
+                        </svg>
+                        <span id="cart-count" class="font-semibold">0</span>
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <button class="menu-toggle block sm:hidden" onclick="toggleMenu()">
+            ☰
+        </button>
+    </nav>
+    <body class="pt-16">
+        <!-- About Us Section -->
+        <section class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2
+                    class="heading-font text-4xl md:text-5xl font-bold text-amber-800 mb-4"
+                >
+                    Our Story
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Column -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg">
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        alt="Indian family cooking together"
+                        class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent"
+                    ></div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="space-y-8">
+                    <!-- Our Story -->
+                    <div>
+                        <h3 class="heading-font text-3xl text-amber-700 mb-3">
+                            🌿 Our Journey
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Born from a love of
+                            <span class="font-semibold text-amber-800"
+                                >home-style Indian cooking</span
+                            >
+                            and a dream to bring people together,
+                            <span class="font-bold text-amber-800"
+                                >Masala Magic</span
+                            >
+                            is more than a restaurant—it's a celebration of
+                            flavor, family, and tradition. Founded by Chef Priya
+                            Sharma with roots in Rajasthan, we blend
+                            generations-old recipes with a modern, sustainable
+                            twist.
+                        </p>
+                    </div>
+
+                    <!-- Heart of Kitchen -->
+                    <div>
+                        <h3 class="heading-font text-3xl text-amber-700 mb-3">
+                            👨‍👩‍👧‍👦 The Heart of Our Kitchen
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Every dish is cooked with the same
+                            <span class="font-semibold text-amber-800"
+                                >love, patience, and spice blends</span
+                            >
+                            you'd find in an Indian home kitchen. Our menu is a
+                            tribute to the comfort food we grew up
+                            with—slow-simmered curries, freshly baked breads,
+                            and street-food favorites—all made with
+                            <span class="font-semibold text-amber-800"
+                                >locally sourced, plant-powered
+                                ingredients</span
+                            >.
+                        </p>
+                    </div>
+
+                    <!-- Our Promise -->
+                    <div>
+                        <h3 class="heading-font text-3xl text-amber-700 mb-3">
+                            ♻️ Our Promise
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            We believe delicious food should also be
+                            <span class="font-semibold text-amber-800"
+                                >kind—to you and the planet</span
+                            >. That's why we:
+                        </p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <svg
+                                    class="h-5 w-5 text-amber-600 mr-2 mt-0.5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    />
+                                </svg>
+                                <span
+                                    ><span class="font-semibold"
+                                        >Source seasonal produce</span
+                                    >
+                                    from nearby farmers</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="h-5 w-5 text-amber-600 mr-2 mt-0.5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    />
+                                </svg>
+                                <span
+                                    ><span class="font-semibold"
+                                        >Minimize waste</span
+                                    >
+                                    through mindful cooking and composting</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="h-5 w-5 text-amber-600 mr-2 mt-0.5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    />
+                                </svg>
+                                <span
+                                    >Use
+                                    <span class="font-semibold"
+                                        >eco-friendly packaging</span
+                                    >
+                                    for takeaway orders</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="pt-4">
+                        <p class="text-gray-700 italic mb-6">
+                            "At Masala Magic, you're not just a customer—you're
+                            family."
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="/src/menu.html">
+                                <button
+                                    class="px-6 py-2 sm:px-8 sm:py-3 text-lg sm:text-xl font-medium bg-lime-300 hover:bg-lime-400 text-gray-900 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                                >
+                                    Explore Our Menu
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
