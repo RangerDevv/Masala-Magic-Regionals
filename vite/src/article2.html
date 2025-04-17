@@ -27,7 +27,6 @@
         <style>
             /* Global Styles */
             body {
-                font-family: "Open Sans", sans-serif;
                 margin: 0;
                 padding: 0;
                 background: #f4f4f4;
@@ -61,6 +60,7 @@
                 height: 40px;
                 margin-right: 10px;
             }
+
             /* Hero Section */
             .process-hero {
                 height: 60vh;
@@ -70,7 +70,7 @@
                 text-align: center;
                 background:
                     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                    url("./imgs/farm.jpg") no-repeat center center/cover;
+                    url("./imgs/truck.jpeg") no-repeat center center/cover;
                 color: #fff;
             }
 
@@ -283,7 +283,7 @@
             /></a>
             <div class="hidden sm:block" id="menu-container">
                 <ul class="flex flex-row gap-5 items-center">
-                    <li><a href="/#our_mission">Our Mission</a></li>
+                <li><a href="/#our_mission">Our Mission</a></li>
                     <li><a href="/src/approach.html">Our Approach</a></li>
                     <li><a href="/src/about.html">About Us</a></li>
                     <li><a href="/src/menu.html">Menu</a></li>
@@ -338,51 +338,47 @@
                 menu.classList.toggle("hidden");
             }
         </script>
-
         <!-- Hero Section -->
-        <section class="process-hero">
+        <section
+            class="process-hero"
+            style="
+                background-image:
+                    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url(&quot;./imgs/truck.jpeg&quot;);
+            "
+        >
             <div class="process-hero-content">
-                <h1>Sourcing & Cultivation</h1>
+                <h1>Transporting Our Produce</h1>
                 <p>
-                    Our commitment to quality begins at the very source - with
-                    local farmers who share our values of sustainability and
-                    organic practices.
+                    Delivering freshness while minimizing our environmental
+                    impact
                 </p>
             </div>
         </section>
 
         <!-- Process Detail Section -->
         <section class="process-detail">
-            <h2>Step 1: Sourcing and Cultivation</h2>
+            <h2>Step 2: Sustainable Transport</h2>
             <div class="process-detail-content">
                 <div class="process-detail-text">
-                    <h3>From Seed to Harvest</h3>
+                    <h3>Efficient Delivery Network</h3>
                     <p>
-                        At Masala Magic, we make sure to source and cultivate
-                        our ingredients from trusted local farms that share our
-                        commitment to quality and sustainability. We maintain
-                        direct relationships with farmers who use traditional,
-                        chemical-free farming methods.
+                        Our optimized routing system reduces fuel consumption by
+                        up to 20% compared to standard delivery methods.
                     </p>
                     <p>
-                        Our ingredients are grown without synthetic pesticides
-                        or fertilizers, and we never use genetically modified
-                        organisms (GMOs). This ensures that every spice,
-                        vegetable, and grain that enters our kitchen meets our
-                        strict standards for purity and flavor.
+                        We use hybrid and electric vehicles where possible, and
+                        all our trucks meet strict emissions standards.
                     </p>
                     <p>
-                        We regularly visit our partner farms to verify their
-                        practices and provide support for their organic
-                        cultivation methods. This hands-on approach guarantees
-                        the freshest, most authentic ingredients for your dining
-                        experience.
+                        Temperature-controlled transport ensures ingredients
+                        arrive at peak freshness, just as nature intended.
                     </p>
                 </div>
                 <div class="process-detail-image">
                     <img
-                        src="https://i0.wp.com/eos.org/wp-content/uploads/2023/05/grape-farming-nashik.jpg?fit=1200%2C675&ssl=1"
-                        alt="Organic farm cultivation"
+                        src="https://www.agriculture.com/thmb/FWDPan63AU7loJvS-AnKP6CKXew=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7020020GettyImages-601797629_preview-4af05b9bd66f4d2cb066ca6238f737a7.jpg"
+                        alt="Food delivery truck"
                     />
                 </div>
             </div>
@@ -391,49 +387,41 @@
         <!-- Benefits Section -->
         <section class="benefits">
             <div class="benefits-container">
-                <h2>Why Our Sourcing Matters</h2>
+                <h2>Transportation Benefits</h2>
                 <div class="benefits-grid">
                     <div class="benefit-card">
-                        <h3><i class="fas fa-leaf"></i> Purity Guaranteed</h3>
+                        <h3><i class="fas fa-truck"></i> Reduced Emissions</h3>
                         <p>
-                            Our strict no-GMO policy and avoidance of synthetic
-                            chemicals means you're eating food as nature
-                            intended, with all its natural nutrients and flavors
-                            intact.
+                            Our efficient routing saves approximately 8 tons of
+                            CO2 annually compared to conventional delivery
+                            methods.
                         </p>
                     </div>
                     <div class="benefit-card">
-                        <h3>
-                            <i class="fas fa-handshake"></i> Farmer Partnerships
-                        </h3>
+                        <h3><i class="fas fa-bolt"></i> Energy Efficient</h3>
                         <p>
-                            By working directly with farmers, we ensure fair
-                            prices and support sustainable agriculture
-                            practices, creating a positive impact on local
-                            communities.
+                            30% of our fleet uses alternative energy sources,
+                            with plans to convert entirely by 2025.
                         </p>
                     </div>
                     <div class="benefit-card">
-                        <h3>
-                            <i class="fas fa-seedling"></i> Seasonal Variety
-                        </h3>
+                        <h3><i class="fas fa-clock"></i> Rapid Delivery</h3>
                         <p>
-                            Our menu changes with the seasons to take advantage
-                            of peak freshness and nutritional value, offering
-                            you the best each season has to offer.
+                            Ingredients go from farm to kitchen in under 12
+                            hours, locking in freshness and nutrients.
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div style="text-align: center">
-                <a href="./approach.html" class="back-button"
-                    ><i class="fas fa-arrow-left"></i> Back to Farm-to-Table
-                    Process</a
-                >
-            </div>
         </section>
 
+        <!-- Back Button -->
+        <div style="text-align: center">
+            <a href="./approach.html" class="back-button"
+                ><i class="fas fa-arrow-left"></i> Back to Farm-to-Table
+                Process</a
+            >
+        </div>
         <script>
             // Animation for elements when they come into view
             const animateOnScroll = () => {

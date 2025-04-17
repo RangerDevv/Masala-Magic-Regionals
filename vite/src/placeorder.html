@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masala Magic</title>
+    <title>Place Order | Masala Magic</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;400;600;700;800;900;1000&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/-icon" href="imgs/Masala Magic.png">
-    <meta name="description" content="Welcome to Indian Restaurant">
-    <meta name="keywords" content="Enjoy Vegetarian Indian Cuisine">
-    <meta name="author" content="Chandhan Juluru">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="imgs/Masala Magic.png">
+    <meta name="description" content="Place your order with Masala Magic">
+    <meta name="keywords" content="Place Order, Masala Magic, Checkout">
+    <meta name="author" content="Masala Magic">
+
+    <!-- Header -->
 
     <nav class="flex flex-row justify-between items-center p-4 top-2 fixed w-[98.8%] m-2 rounded-2xl z-50 shadow-xl">
             <a href="/" class="AK-logo w-16"><img src="/src/imgs/Masala Magic.png" alt=""></a>
@@ -58,63 +58,57 @@
             menu.classList.toggle('hidden');
         }
         </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            text-align: center;
+    <!-- Start Main Section -->
+    <main class="flex flex-col justify-center items-center pt-36">
+                <!-- Payment Options -->
+                <div class="payment-options pt-32">
+                    <label>Payment Option:</label>
+                    <button class="pay-btn" onclick="handlePaymentMethod('payNow')">Pay Now</button>
+                    <button class="pay-btn" onclick="handlePaymentMethod('payAtStore')">Pay at Store</button>
+                </div>
+
+                <script>
+                    function handlePaymentMethod(paymentMethod) {
+                        // Check the payment method chosen by the user
+                        if (paymentMethod === "payNow") {
+                            // Redirect to a page where the user can enter their personal details
+                            window.location.href = "pickup.html";
+                        } else if (paymentMethod === "payAtStore") {
+                            // Redirect to the thank you page
+                            window.location.href = "thankyoupage.html";
+                        } else {
+                            // Default case if no valid option is selected
+                            alert("Invalid payment option");
+                        }
+                    }
+                </script>
+
+
+        <style>
+          .payment-options {
+            display: flex;
+            align-items: center;
         }
 
-        h1 {
-            color: #4CAF50;
-            margin-top: 50px;
-            font-size: 2.5rem;
+        .payment-options label {
+            margin-right: 10px;
         }
 
-        p {
-            font-size: 1.2rem;
-            margin: 15px 0;
+        .pay-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .pay-btn:hover {
+            background-color: #0056b3;
         }
 
-        footer .container {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
+        </style>
 
-        footer a {
-            color: var(--section-background);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <!-- Main Content -->
-<body class="">
-    <h1 class="pt-32 font-bold">Thank You!</h1>
-    <p>Your Reservation has been placed successfully.</p>
-</body>
+    </body>
 </html>
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Masala Magic Company. All rights reserved.</p>
-            <p><a href="index.html">Back to Home</a></p>
-        </div>
-    </footer>
-</body>
