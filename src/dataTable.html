@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sustainability Metrics | Masala Magic</title>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;400;600;700;800;900;1000&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="imgs/Masala Magic.png" />
+        <meta
+            name="description"
+            content="See how Masala Magic compares in sustainability metrics against industry standards."
+        />
+        <meta
+            name="keywords"
+            content="sustainability, metrics, comparison, eco-friendly, Masala Magic"
+        />
+        <meta name="author" content="Masala Magic" />
+        <style>
+            /* Global Styles */
+            body {
+                font-family: "Open Sans", sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            /* Header Styles */
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            header .mainlogo {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: #e66611;
+                text-decoration: none;
+            }
+
+            header .mainlogo img {
+                height: 40px;
+                margin-right: 10px;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            nav ul li {
+                margin-left: 20px;
+            }
+
+            nav ul li a {
+                color: #333;
+                text-decoration: none;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+            nav ul li a:hover {
+                color: #ff6f61;
+            }
+
+            /* Main Content */
+            .main-content {
+                margin-top: 100px;
+                padding: 40px 20px;
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Sustainability Hero */
+            .sustainability-hero {
+                text-align: center;
+                margin-bottom: 50px;
+                padding: 30px;
+                background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+                color: white;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(86, 171, 47, 0.3);
+            }
+
+            .sustainability-hero h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+                font-weight: 800;
+            }
+
+            .sustainability-hero p {
+                font-size: 1.2rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Comparison Table */
+            .comparison-container {
+                background: #fff8da;
+                padding: 30px;
+                border-radius: 15px;
+                border: 2px solid #2e7d32;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-bottom: 40px;
+            }
+
+            .comparison-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            }
+
+            .comparison-table thead tr {
+                background-color: #2e7d32;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 15px;
+                text-align: left;
+            }
+
+            .comparison-table th {
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                letter-spacing: 0.5px;
+            }
+
+            .comparison-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+                transition: all 0.3s ease;
+            }
+
+            .comparison-table tbody tr:nth-of-type(even) {
+                background-color: #f9f9f9;
+            }
+
+            .comparison-table tbody tr:last-of-type {
+                border-bottom: 2px solid #2e7d32;
+            }
+
+            .comparison-table tbody tr:hover {
+                background-color: #f1f8e9;
+            }
+
+            .positive-diff {
+                color: #2e7d32;
+                font-weight: 600;
+            }
+
+            .negative-diff {
+                color: #c62828;
+                font-weight: 600;
+            }
+
+            /* Key Takeaways */
+            .key-takeaways {
+                background: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                margin-bottom: 40px;
+            }
+
+            .key-takeaways h2 {
+                color: #e66611;
+                margin-bottom: 20px;
+                font-size: 2rem;
+            }
+
+            .takeaway-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+
+            .takeaway-card {
+                background: #f9f9f9;
+                padding: 20px;
+                border-radius: 10px;
+                border-left: 5px solid #e66611;
+            }
+
+            .takeaway-card h3 {
+                color: #2e7d32;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            /* Back Button */
+            .back-button {
+                display: inline-block;
+                padding: 12px 25px;
+                background: #e66611;
+                color: white;
+                text-decoration: none;
+                border-radius: 30px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                border: 2px solid #e66611;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .back-button:hover {
+                background: transparent;
+                color: #e66611;
+            }
+
+            /* Footer */
+            footer {
+                background: #333;
+                color: #fff;
+                text-align: center;
+                padding: 30px 0;
+                margin-top: 50px;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .sustainability-hero h1 {
+                    font-size: 2.2rem;
+                }
+
+                .comparison-table {
+                    display: block;
+                    overflow-x: auto;
+                }
+
+                .main-content {
+                    margin-top: 80px;
+                    padding: 20px 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <a href="index.html" class="mainlogo"
+                    ><img src="imgs/Masala Magic.png" alt="Logo" /> Masala
+                    Magic</a
+                >
+                <nav>
+                    <ul>
+                        <li>
+                            <a
+                                href="index.html#our_mission"
+                                class="nav-a nav-otherL"
+                                >Our Mission</a
+                            >
+                        </li>
+                        <li>
+                            <a href="index.html#our_process" class="nav-a"
+                                >Our Process</a
+                            >
+                        </li>
+                        <li>
+                            <a href="index.html#Menu" class="nav-a">Our Menu</a>
+                        </li>
+                        <li>
+                            <a href="reservation.html" class="nav-a"
+                                >Reservation</a
+                            >
+                        </li>
+                        <li>
+                            <a href="checkout.html" class="nav-a"
+                                ><img src="imgs/ShoppingCart.png" alt="Cart"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="References.html" class="nav-a"
+                                >References</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="sustainability-hero">
+                <h1>Sustainability Metrics</h1>
+                <p>
+                    See how Masala Magic's eco-conscious practices compare to
+                    industry standards
+                </p>
+            </section>
+
+            <!-- Comparison Table -->
+            <section class="comparison-container">
+                <h2
+                    style="
+                        color: #2e7d32;
+                        font-size: 1.8rem;
+                        margin-bottom: 10px;
+                    "
+                >
+                    Sustainability Comparison
+                </h2>
+                <p style="color: #555; margin-bottom: 20px">
+                    Data based on 2023 industry averages for comparable
+                    restaurants
+                </p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Industry Average</th>
+                            <th>Masala Magic</th>
+                            <th>Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CO2 Emissions (kg CO2e per meal)</td>
+                            <td>2.5</td>
+                            <td>1.2</td>
+                            <td class="positive-diff">-52%</td>
+                        </tr>
+                        <tr>
+                            <td>Percentage of Electric Vehicles</td>
+                            <td>20.3%</td>
+                            <td>60.7%</td>
+                            <td class="positive-diff">+40.4%</td>
+                        </tr>
+                        <tr>
+                            <td>Renewable Energy Usage</td>
+                            <td>30.4%</td>
+                            <td>80.2%</td>
+                            <td class="positive-diff">+49.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Water Usage (liters per meal)</td>
+                            <td>150.0</td>
+                            <td>90.8</td>
+                            <td class="positive-diff">-39.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Local Sourcing (% of ingredients)</td>
+                            <td>40.5%</td>
+                            <td>75.3%</td>
+                            <td class="positive-diff">+34.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Food Waste (% of total ingredients)</td>
+                            <td>12.1%</td>
+                            <td>4.8%</td>
+                            <td class="positive-diff">-7.3%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="key-takeaways">
+                <h2>Key Takeaways</h2>
+                <div class="takeaway-grid">
+                    <div class="takeaway-card">
+                        <h3><i class="fas fa-leaf"></i> Carbon Leader</h3>
+                        <p>
+                            Our CO2 emissions are less than half the industry
+                            average, thanks to local sourcing and efficient
+                            operations.
+                        </p>
+                    </div>
+                    <div class="takeaway-card">
+                        <h3><i class="fas fa-bolt"></i> Energy Pioneer</h3>
+                        <p>
+                            With 80% renewable energy usage, we're leading the
+                            transition to sustainable restaurant operations.
+                        </p>
+                    </div>
+                    <div class="takeaway-card">
+                        <h3><i class="fas fa-tint"></i> Water Wise</h3>
+                        <p>
+                            Our water conservation practices save nearly 60
+                            liters per meal compared to competitors.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Back Button -->
+            <div style="text-align: center">
+                <a href="index.html#our_process" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back to Our Process
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>© 2024 Masala Magic. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Simple animation for table rows
+            document.addEventListener("DOMContentLoaded", function () {
+                const rows = document.querySelectorAll(
+                    ".comparison-table tbody tr",
+                );
+
+                rows.forEach((row, index) => {
+                    row.style.opacity = "0";
+                    row.style.transform = "translateX(-20px)";
+                    row.style.transition = `all 0.5s ease ${index * 0.1}s`;
+
+                    setTimeout(() => {
+                        row.style.opacity = "1";
+                        row.style.transform = "translateX(0)";
+                    }, 100);
+                });
+            });
+        </script>
+    </body>
+</html>
